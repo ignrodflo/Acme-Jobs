@@ -1,0 +1,30 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+# anonymous.comprecord.form ###############################
+
+anonymous.comprecord.form.label.companyName = Company Name:
+anonymous.comprecord.form.label.sector = Sector:
+anonymous.comprecord.form.label.ceoName = CEO:
+anonymous.comprecord.form.label.activDescription = Activity Description:
+anonymous.comprecord.form.label.website = Website:
+anonymous.comprecord.form.label.phone = Phone Number:
+anonymous.comprecord.form.label.email = E-mail:
+anonymous.comprecord.form.label.incorporated: Incorporated:
+anonymous.comprecord.form.label.rating = Rating:
+
+anonymous.comprecord.button.return = Return
+
+# anonymous.comprecord.list ###############################
+
+anonymous.comprecord.list.label.companyName: Company Name
+anonymous.comprecord.list.label.sector = Sector
+anonymous.comprecord.list.label.activDescription = Activity Description
+anonymous.comprecord.list.label.rating = Rating
