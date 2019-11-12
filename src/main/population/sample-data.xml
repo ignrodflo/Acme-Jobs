@@ -110,7 +110,7 @@
 
   <!-- Records beans -->
 	
-	<bean id="record01" class="acme.entities.comprecords.Comprecord">
+	<bean id="record01" class="acme.entities.companyRecords.CompanyRecord">
 		<property name="companyname" value="Sample record 01"/>
 		<property name="sector" value="Informática"/>
 		<property name="ceoname" value="Pedro Manuel Cobos"/>
@@ -122,7 +122,7 @@
 		<property name="rating" value="3"/>
 	</bean>
 	
-	<bean id="record02" class="acme.entities.comprecords.Comprecord">
+	<bean id="record02" class="acme.entities.companyRecords.CompanyRecord">
 		<property name="companyname" value="Sample record 02"/>
 		<property name="sector" value="Derecho"/>
 		<property name="ceoname" value="Rafael Liebana"/>

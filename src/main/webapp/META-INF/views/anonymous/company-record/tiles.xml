@@ -18,12 +18,12 @@
 
 <tiles-definitions>
 
-		<definition name="authenticated/comprecord/list" extends="master">
-			<put-attribute name="body" type="template" value="../authenticated/comprecord/list.jsp" />
+		<definition name="anonymous/company-record/list" extends="master">
+			<put-attribute name="body" type="template" value="../anonymous/company-record/list.jsp" />
 		</definition>
 
-		<definition name="authenticated/comprecord/form" extends="master">
-			<put-attribute name="body" type="template" value="../authenticated/comprecord/form.jsp" />
+		<definition name="anonymous/company-record/form" extends="master">
+			<put-attribute name="body" type="template" value="../anonymous/company-record/form.jsp" />
 		</definition>
 	
 </tiles-definitions>

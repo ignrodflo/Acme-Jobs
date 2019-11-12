@@ -1,36 +1,36 @@
 
-package acme.features.anonymous.comprecords;
+package acme.features.anonymous.companyRecord;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.comprecords.Comprecord;
+import acme.entities.companyRecords.CompanyRecord;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Anonymous;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AnonymousComprecordShowService implements AbstractShowService<Anonymous, Comprecord> {
+public class AnonymousCompanyRecordShowService implements AbstractShowService<Anonymous, CompanyRecord> {
 
 	//Internal State
 
 	@Autowired
-	private AnonymousComprecordRepository repository;
+	private AnonymousCompanyRecordRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Comprecord> request) {
+	public boolean authorise(final Request<CompanyRecord> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public Comprecord findOne(final Request<Comprecord> request) {
+	public CompanyRecord findOne(final Request<CompanyRecord> request) {
 		assert request != null;
 
-		Comprecord result;
+		CompanyRecord result;
 		int id;
 
 		id = request.getModel().getInteger("id");
@@ -40,7 +40,7 @@ public class AnonymousComprecordShowService implements AbstractShowService<Anony
 	}
 
 	@Override
-	public void unbind(final Request<Comprecord> request, final Comprecord entity, final Model model) {
+	public void unbind(final Request<CompanyRecord> request, final CompanyRecord entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
