@@ -24,7 +24,7 @@ public interface ProviderRequestRepository extends AbstractRepository {
 	@Query("Select r from Request r where r.ticker = ?1")
 	Request findOneRequestByTicker(String ticker);
 
-	@Query("Select r from Offer r")
+	@Query("Select r from Request r")
 	Collection<Request> findManyRequests();
 
 }
