@@ -63,12 +63,11 @@ master.menu.administrator.sysconfig = System Configuration
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider
-master.menu.provider.favourite-link = Favourite link
+master.menu.provider.requests.create = Create Request
 
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumer
-master.menu.consumer.favourite-link = Favourite link
 master.menu.consumer.offers.create = Create Offer
 
 # master.menu.user-account ####################################################

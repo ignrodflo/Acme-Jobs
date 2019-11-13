@@ -8,7 +8,7 @@ consumer.offer.form.label.ticker = Reference:
 consumer.offer.form.label.accept = I confirm the creation
 consumer.offer.error.must-accept = Must accept the creation
 consumer.offer.error.duplicated = This ticker is already taken
-consumer.offer.error.money-no-euro = It must be in Euros
+consumer.offer.error.money-no-euro = It must be in Euro
 
 consumer.offer.form.button.create = Create
 consumer.offer.form.button.return = Return
