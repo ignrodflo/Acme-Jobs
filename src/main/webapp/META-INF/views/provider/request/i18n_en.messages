@@ -1,0 +1,17 @@
+provider.request.form.label.creationMoment = Creation moment
+provider.request.form.label.title = Title:
+provider.request.form.label.deadLine = Dead-line:
+provider.request.form.label.text = Text:
+provider.request.form.label.reward = Reward:
+provider.request.form.label.ticker = Reference:
+
+provider.request.form.label.accept = I confirm the creation
+provider.request.error.must-accept = Must accept the creation
+provider.request.error.duplicated = This ticker is already taken
+provider.request.error.money-no-euro = It must be in Euro
+
+provider.request.form.button.create = Create
+provider.request.form.button.return = Return
+
+provider.request.list.label.creationMoment = Creation moment
+provider.request.list.label.title = Title

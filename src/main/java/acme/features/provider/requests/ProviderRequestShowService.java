@@ -1,21 +1,21 @@
 
-package acme.features.authenticated.requests;
+package acme.features.provider.requests;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.requests.Request;
+import acme.entities.roles.Provider;
 import acme.framework.components.Model;
-import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedRequestShowService implements AbstractShowService<Authenticated, Request> {
+public class ProviderRequestShowService implements AbstractShowService<Provider, Request> {
 
 	//Internal State
 
 	@Autowired
-	private AuthenticatedRequestRepository repository;
+	private ProviderRequestRepository repository;
 
 	//AbstractListService<Administrator, Request> interface
 

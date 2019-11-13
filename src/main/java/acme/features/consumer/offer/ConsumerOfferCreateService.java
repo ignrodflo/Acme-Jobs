@@ -61,7 +61,7 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert errors != null;
 
-		//Hacer las validaciones
+		//Validaciones
 
 		boolean isAccepted, isDuplicated, isEuroZone;
 		Money money;

@@ -53,11 +53,9 @@ public class Offer extends DomainEntity {
 	private Money				money;
 
 	//Ticker
-	@Pattern(regexp = "O\\p{Upper}{4}-[0-9]{5}")
+	@Pattern(regexp = "O\\p{Upper}{4}-[0-9]{5}", message = "Ticker doesn't follow the pattern, OXXXX-99999, where “O” is letter “O”, “X” denotes an arbitrary letter and “9” denotes an arbitrary digit ")
 	@Column(unique = true)
 	@NotNull
 	private String				ticker;
-
-	//Checkbox
 
 }

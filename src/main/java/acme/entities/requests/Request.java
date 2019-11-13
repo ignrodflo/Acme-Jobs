@@ -35,7 +35,7 @@ public class Request extends DomainEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^(R\\p{Upper}{4}-[0-9]{5})$")
+	@Pattern(regexp = "^(R\\p{Upper}{4}-[0-9]{5})$", message = "Ticker doesn't follow the pattern, RXXXX-99999, where “R” is letter “R”, “X” denotes an arbitrary letter and “9” denotes an arbitrary digit ")
 	private String				ticker;
 
 	@NotBlank
@@ -46,7 +46,7 @@ public class Request extends DomainEntity {
 	private Date				creationMoment;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				deadline;
+	private Date				deadLine;
 
 	@NotBlank
 	private String				text;
