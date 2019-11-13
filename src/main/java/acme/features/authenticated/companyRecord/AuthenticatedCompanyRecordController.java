@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.comprecords;
+package acme.features.authenticated.companyRecord;
 
 import javax.annotation.PostConstruct;
 
@@ -7,22 +7,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.comprecords.Comprecord;
+import acme.entities.companyRecords.CompanyRecord;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/authenticated/comprecord/")
-public class AuthenticatedComprecordController extends AbstractController<Authenticated, Comprecord> {
+@RequestMapping("/authenticated/company-record/")
+public class AuthenticatedCompanyRecordController extends AbstractController<Authenticated, CompanyRecord> {
 
 	//Internal state
 
 	@Autowired
-	private AuthenticatedComprecordListService	listService;
+	private AuthenticatedCompanyRecordListService	listService;
 
 	@Autowired
-	private AuthenticatedComprecordShowService	showService;
+	private AuthenticatedCompanyRecordShowService	showService;
 
 
 	//Constructores

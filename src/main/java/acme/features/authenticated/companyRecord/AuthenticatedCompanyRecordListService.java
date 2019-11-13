@@ -1,36 +1,36 @@
 
-package acme.features.authenticated.comprecords;
+package acme.features.authenticated.companyRecord;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.comprecords.Comprecord;
+import acme.entities.companyRecords.CompanyRecord;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedComprecordListService implements AbstractListService<Authenticated, Comprecord> {
+public class AuthenticatedCompanyRecordListService implements AbstractListService<Authenticated, CompanyRecord> {
 
 	@Autowired
-	AuthenticatedComprecordRepository repository;
+	AuthenticatedCompanyRecordRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Comprecord> request) {
+	public boolean authorise(final Request<CompanyRecord> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public Collection<Comprecord> findMany(final Request<Comprecord> request) {
+	public Collection<CompanyRecord> findMany(final Request<CompanyRecord> request) {
 		assert request != null;
 
-		Collection<Comprecord> result;
+		Collection<CompanyRecord> result;
 
 		result = this.repository.findManyAll();
 
@@ -38,7 +38,7 @@ public class AuthenticatedComprecordListService implements AbstractListService<A
 	}
 
 	@Override
-	public void unbind(final Request<Comprecord> request, final Comprecord entity, final Model model) {
+	public void unbind(final Request<CompanyRecord> request, final CompanyRecord entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
