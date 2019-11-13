@@ -1,0 +1,12 @@
+consumer.offer.form.label.moment = Moment:
+consumer.offer.form.label.title = Title:
+consumer.offer.form.label.deadLine = Dead-line:
+consumer.offer.form.label.text = Text:
+consumer.offer.form.label.money = Offer:
+consumer.offer.form.label.ticker = Reference:
+
+consumer.offer.form.button.create = Create
+consumer.offer.form.button.return = Return
+
+consumer.offer.list.label.moment = Moment
+consumer.offer.list.label.title = Title
