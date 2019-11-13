@@ -5,6 +5,8 @@ consumer.offer.form.label.text = Texto:
 consumer.offer.form.label.money = Oferta:
 consumer.offer.form.label.ticker = Referencia:
 
+consumer.offer.form.label.accept = Confirmo la creación
+
 consumer.offer.form.button.create = Crear
 consumer.offer.form.button.return = Volver
 

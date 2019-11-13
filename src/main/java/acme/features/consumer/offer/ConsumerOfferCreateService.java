@@ -51,14 +51,6 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 	public Offer instantiate(final Request<Offer> request) {
 		Offer result;
 		result = new Offer();
-		//		Date moment;
-		//		moment = new Date(System.currentTimeMillis() - 1);
-		//		result.setDeadLine(moment);
-		//		Money money = new Money();
-		//		result.setTitle("Offer");
-		//		result.setText("This is a new Offer");
-		//		result.setOffer(money);
-		//		result.setTicker("OXXXX-99999");
 		return result;
 	}
 
@@ -69,13 +61,23 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert errors != null;
 
 		//Hacer las validaciones
+
+		boolean isAccepted, isDuplicated;
+
+		isAccepted = request.getModel().getBoolean("accept");
+		errors.state(request, isAccepted, "accept", "consumer.offer.error.must-accept");
+
+		isDuplicated = this.repository.findOneOfferByTicker(entity.getTicker()) != null;
+		errors.state(request, !isDuplicated, "ticker", "consumer.offer.error.duplicated");
+
 	}
 
 	@Override
 	public void create(final Request<Offer> request, final Offer entity) {
+		assert request != null;
+		assert entity != null;
 
 		Date moment;
-
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.setMoment(moment);
 		this.repository.save(entity);

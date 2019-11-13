@@ -12,16 +12,19 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface ConsumerOfferRepository extends AbstractRepository {
 
-	@Query("Select a from Offer a where a.id = ?1")
+	@Query("Select o from Offer o where o.id = ?1")
 	Offer findOneById(int id);
 
-	@Query("Select a from Offer a")
+	@Query("Select o from Offer o")
 	Collection<Offer> findManyAll();
 
-	@Query("Select a from Offer a where a.id = ?1")
+	@Query("Select o from Offer o where o.id = ?1")
 	Offer findOneOfferById(int id);
 
-	@Query("Select a from Offer a")
+	@Query("Select o from Offer o where o.ticker = ?1")
+	Offer findOneOfferByTicker(String ticker);
+
+	@Query("Select o from Offer o")
 	Collection<Offer> findManyOffers();
 
 }

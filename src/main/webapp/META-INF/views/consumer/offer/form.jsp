@@ -17,6 +17,7 @@
 	<acme:form-textarea code="consumer.offer.form.label.text" path="text"/>
 	<acme:form-money code="consumer.offer.form.label.money" path="money"/>
 	<acme:form-textbox code="consumer.offer.form.label.ticker" path="ticker"/>
+	<acme:form-checkbox code="consumer.offer.form.label.accept" path="accept"/>
 	
 	<acme:form-submit test="${command == 'create'}"
 		code="consumer.offer.form.button.create"

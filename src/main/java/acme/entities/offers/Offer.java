@@ -29,15 +29,17 @@ public class Offer extends DomainEntity {
 
 	//Atributos
 
-	@NotBlank
 	@NotNull
+	@NotBlank
 	private String				title;
 
+	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	private Date				moment;
 
 	//Atributo Deadline
+	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				deadLine;
 
@@ -53,7 +55,9 @@ public class Offer extends DomainEntity {
 	//Ticker
 	@Pattern(regexp = "O\\p{Upper}{4}-[0-9]{5}")
 	@Column(unique = true)
-	@NotBlank
+	@NotNull
 	private String				ticker;
+
+	//Checkbox
 
 }
