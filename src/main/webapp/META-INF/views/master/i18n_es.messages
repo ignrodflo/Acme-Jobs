@@ -51,6 +51,7 @@ master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.announcements = Anuncios
+master.menu.administrator.announcements.create = Crear Anuncio
 master.menu.administrator.sysconfig = Configuración del Sistema
 
 # master.menu.provider ########################################################

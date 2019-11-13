@@ -43,9 +43,11 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.administrator.announcements" action="/administrator/announcement/list"/>
+			<acme:menu-suboption code="master.menu.administrator.announcements" action="/administrator/announcement/list"/>	
+			<acme:menu-suboption code="master.menu.administrator.announcements.create" action="/administrator/announcement/create"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.sysconfig" action="/administrator/sysconfig/list"/>
 			<acme:menu-separator/>
