@@ -18,4 +18,5 @@ administrator.sysconfig.list.label.threshold = Umbral
 administrator.sysconfig.form.label.spamwords = Palabras Spam
 administrator.sysconfig.form.label.threshold = Umbral
 
-administrator.sysconfig.form.return = Volver
+administrator.sysconfig.form.button.update = Actualizar
+administrator.sysconfig.form.button.return = Volver
