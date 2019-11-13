@@ -52,6 +52,7 @@ master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.announcements = Anuncios
 master.menu.administrator.sysconfig = Configuración del Sistema
+master.menu.administrator.companyrecords = Archivos de la Compañía
 
 # master.menu.provider ########################################################
 
