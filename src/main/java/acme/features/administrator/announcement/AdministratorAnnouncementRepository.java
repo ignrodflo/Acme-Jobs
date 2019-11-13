@@ -13,9 +13,15 @@ import acme.framework.repositories.AbstractRepository;
 public interface AdministratorAnnouncementRepository extends AbstractRepository {
 
 	@Query("Select a from Announcement a where a.id = ?1")
-	Announcement findOneById(int id);
+	Announcement findOneAnnouncementById(int id);
+
+	@Query("Select a from Announcement a")
+	Collection<Announcement> findManyAnnouncements();
 
 	@Query("Select a from Announcement a")
 	Collection<Announcement> findManyAll();
+
+	@Query("Select a from Announcement a where a.id = ?1")
+	Announcement findOneById(int id);
 
 }

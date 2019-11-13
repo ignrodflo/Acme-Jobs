@@ -57,6 +57,7 @@ master.menu.administrator = Administrator
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.announcements = Announcements
+master.menu.administrator.announcements.create = Create announcement
 master.menu.administrator.sysconfig = System Configuration
 
 # master.menu.provider ########################################################
