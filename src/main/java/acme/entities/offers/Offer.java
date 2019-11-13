@@ -50,7 +50,7 @@ public class Offer extends DomainEntity {
 
 	@NotNull
 	@Valid
-	private Money				offer;
+	private Money				money;
 
 	//Ticker
 	@Pattern(regexp = "O\\p{Upper}{4}-[0-9]{5}")

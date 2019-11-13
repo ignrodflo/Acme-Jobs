@@ -11,6 +11,7 @@ import acme.entities.roles.Consumer;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractCreateService;
 
 @Service
@@ -44,7 +45,7 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "moment", "deadLine", "text", "offer", "ticker");
+		request.unbind(entity, model, "title", "moment", "deadLine", "text", "money", "ticker");
 	}
 
 	@Override
@@ -62,13 +63,21 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 
 		//Hacer las validaciones
 
-		boolean isAccepted, isDuplicated;
+		boolean isAccepted, isDuplicated, isEuroZone;
+		Money money;
+		String eur = "EUR";
+
+		money = entity.getMoney();
+		String money2 = money.toString();
 
 		isAccepted = request.getModel().getBoolean("accept");
 		errors.state(request, isAccepted, "accept", "consumer.offer.error.must-accept");
 
 		isDuplicated = this.repository.findOneOfferByTicker(entity.getTicker()) != null;
 		errors.state(request, !isDuplicated, "ticker", "consumer.offer.error.duplicated");
+
+		isEuroZone = money2.contains(eur);
+		errors.state(request, isEuroZone, "money", "consumer.offer.error.money-no-euro");
 
 	}
 
