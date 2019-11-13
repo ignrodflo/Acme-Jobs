@@ -45,7 +45,7 @@ public class AuthenticatedCompanyRecordShowService implements AbstractShowServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "companyname", "sector", "ceoname", "activdescription", "website", "phone", "email", "companytype", "rating");
+		request.unbind(entity, model, "companyname", "sector", "ceoname", "activdescription", "website", "phone", "email", "incorporated", "rating");
 	}
 
 }
