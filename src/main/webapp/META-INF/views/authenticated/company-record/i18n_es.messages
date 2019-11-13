@@ -17,7 +17,7 @@ authenticated.company-record.form.label.activDescription = Descripcion de la Act
 authenticated.company-record.form.label.website = Página Web:
 authenticated.company-record.form.label.phone = Telefono:
 authenticated.company-record.form.label.email = E-mail:
-authenticated.company-record.form.label.incorporated: Sociedad Anónima:
+authenticated.company-record.form.label.incorporated: Sociedad Anónima
 authenticated.company-record.form.label.rating = Rating:
 
 authenticated.company-record.button.return = Volver

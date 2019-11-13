@@ -19,7 +19,6 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-      			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.announcements" action="/anonymous/announcement/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.investorrecord" action="/anonymous/investor/list"/>
@@ -47,7 +46,9 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.announcements" action="/administrator/announcement/list"/>
 			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.administrator.companyrecords" action="/administrator/company-record/list"/>
+			<acme:menu-suboption code="master.menu.administrator.companyrecords.list" action="/administrator/company-record/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.companyrecords.create" action="/administrator/company-record/create"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.sysconfig" action="/administrator/sysconfig/list"/>
 			<acme:menu-separator/>

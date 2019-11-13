@@ -17,10 +17,13 @@ administrator.company-record.form.label.activDescription = Activity Description:
 administrator.company-record.form.label.website = Website:
 administrator.company-record.form.label.phone = Phone Number:
 administrator.company-record.form.label.email = E-mail:
-administrator.company-record.form.label.incorporated: Incorporated:
+administrator.company-record.form.label.incorporated: Incorporated
 administrator.company-record.form.label.rating = Rating:
+administrator.company-record.form.button.delete = Delete
+administrator.company-record.form.button.create = Create
+administrator.company-record.form.button.update = Update
 
-administrator.company-record.button.return = Return
+administrator.company-record.form.button.return = Return
 
 # administrator.company-record.list ###############################
 

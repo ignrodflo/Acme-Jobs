@@ -17,7 +17,7 @@ anonymous.company-record.form.label.activDescription = Descripcion de la Activid
 anonymous.company-record.form.label.website = Página Web:
 anonymous.company-record.form.label.phone = Telefono:
 anonymous.company-record.form.label.email = E-mail:
-anonymous.company-record.form.label.incorporated: Sociedad Anónima:
+anonymous.company-record.form.label.incorporated: Sociedad Anónima
 anonymous.company-record.form.label.rating = Rating:
 
 anonymous.company-record.button.return = Volver

@@ -23,7 +23,7 @@
 	<acme:form-url code="authenticated.company-record.form.label.website" path="website" />
 	<acme:form-textbox code="authenticated.company-record.form.label.phone" path="phone" />
 	<acme:form-textbox code="authenticated.company-record.form.label.email" path="email" />
-	<acme:form-textbox code="authenticated.company-record.form.label.incorporated" path="incorporated" />
+	<acme:form-checkbox code="authenticated.company-record.form.label.incorporated" path="incorporated" readonly="True"/>
 	<acme:form-integer code="authenticated.company-record.form.label.rating" path="rating" />
 	
   	<acme:form-return code="authenticated.company-record.button.return"/>

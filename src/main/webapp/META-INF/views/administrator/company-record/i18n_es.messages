@@ -17,10 +17,13 @@ administrator.company-record.form.label.activDescription = Descripcion de la Act
 administrator.company-record.form.label.website = Página Web:
 administrator.company-record.form.label.phone = Telefono:
 administrator.company-record.form.label.email = E-mail:
-administrator.company-record.form.label.incorporated: Sociedad Anónima:
+administrator.company-record.form.label.incorporated: Sociedad Anónima
 administrator.company-record.form.label.rating = Rating:
+administrator.company-record.form.button.delete = Borrar
+administrator.company-record.form.button.create = Crear
+administrator.company-record.form.button.update = Actualizar
 
-administrator.company-record.button.return = Volver
+administrator.company-record.form.button.return = Volver
 
 # administrator.company-record.list ###############################
 
