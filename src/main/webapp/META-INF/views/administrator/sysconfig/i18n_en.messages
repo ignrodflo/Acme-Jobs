@@ -18,4 +18,5 @@ administrator.sysconfig.list.label.threshold = Threshold
 administrator.sysconfig.form.label.spamwords = Spam Words
 administrator.sysconfig.form.label.threshold = Threshold
 
-administrator.sysconfig.form.return = Return
+administrator.sysconfig.form.button.update = Update
+administrator.sysconfig.form.button.return = Return

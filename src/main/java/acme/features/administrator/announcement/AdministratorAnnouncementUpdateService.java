@@ -27,6 +27,7 @@ public class AdministratorAnnouncementUpdateService implements AbstractUpdateSer
 	@Override
 	public boolean authorise(final Request<Announcement> request) {
 		assert request != null;
+
 		return true;
 	}
 
@@ -37,7 +38,6 @@ public class AdministratorAnnouncementUpdateService implements AbstractUpdateSer
 		assert errors != null;
 
 		request.bind(entity, errors, "moment");
-
 	}
 
 	@Override
