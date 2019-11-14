@@ -30,15 +30,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `banner` (
-       `id` integer not null,
-        `version` integer not null,
-        `picture` varchar(255),
-        `slogan` varchar(255),
-        `targeturl` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
     create table `challenge` (
        `id` integer not null,
         `version` integer not null,
@@ -75,7 +66,7 @@
         `ceoname` varchar(255),
         `companyname` varchar(255),
         `email` varchar(255),
-        `incorporated` bit not null,
+        `incorporated` bit,
         `phone` varchar(255),
         `rating` varchar(255),
         `sector` varchar(255),
@@ -109,6 +100,7 @@
         `slogan` varchar(255),
         `targeturl` varchar(255),
         `jingle` varchar(255),
+
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -117,8 +109,8 @@
         `version` integer not null,
         `dead_line` datetime(6),
         `moment` datetime(6),
-        `offer_amount` double precision,
-        `offer_currency` varchar(255),
+        `money_amount` double precision,
+        `money_currency` varchar(255),
         `text` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),

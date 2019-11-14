@@ -57,6 +57,7 @@ master.menu.administrator = Administrator
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.announcements = Announcements
+master.menu.administrator.announcements.create = Create announcement
 master.menu.administrator.sysconfig = System Configuration
 master.menu.administrator.companyrecords.list = Company Records
 master.menu.administrator.companyrecords.create = Create Company Record
@@ -64,12 +65,12 @@ master.menu.administrator.companyrecords.create = Create Company Record
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider
-master.menu.provider.favourite-link = Favourite link
+master.menu.provider.requests.create = Create Request
 
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumer
-master.menu.consumer.favourite-link = Favourite link
+master.menu.consumer.offers.create = Create Offer
 
 # master.menu.user-account ####################################################
 

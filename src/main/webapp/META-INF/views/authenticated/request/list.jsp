@@ -7,7 +7,7 @@
 	<acme:list-column code="authenticated.request.list.label.ticker" path="ticker" width="20%"/>
 	<acme:list-column code="authenticated.request.list.label.title" path="title" width="40%"/>
 	<acme:list-column code="authenticated.request.list.label.creationMoment" path="creationMoment" width="10%"/>
-	<acme:list-column code="authenticated.request.list.label.deadline" path="deadline" width="10%"/>
+	<acme:list-column code="authenticated.request.list.label.deadLine" path="deadLine" width="10%"/>
 <%-- 	<acme:list-column code="authenticated.request.list.label.text" path="text" width="20%"/>
 	<acme:list-column code="authenticated.request.list.label.reward" path="reward" width="20%"/>
  --%>	

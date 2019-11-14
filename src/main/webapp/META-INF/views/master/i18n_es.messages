@@ -51,6 +51,7 @@ master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.announcements = Anuncios
+master.menu.administrator.announcements.create = Crear Anuncio
 master.menu.administrator.sysconfig = Configuración del Sistema
 master.menu.administrator.companyrecords.list = Archivos de las Compañías
 master.menu.administrator.companyrecords.create = Crear Archivo de Compañía
@@ -58,12 +59,12 @@ master.menu.administrator.companyrecords.create = Crear Archivo de Compañía
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
+master.menu.provider.requests.create = Crear Solicitud
 
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
+master.menu.consumer.offers.create = Crear Oferta
 
 # master.menu.user-account ####################################################
 

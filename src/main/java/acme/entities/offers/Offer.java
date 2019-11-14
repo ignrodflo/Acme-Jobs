@@ -29,10 +29,13 @@ public class Offer extends DomainEntity {
 
 	//Atributos
 
+	
 	@NotBlank
 	private String				title;
 
-	@NotNull
+
+	//@NotNull
+
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	private Date				moment;
@@ -49,12 +52,12 @@ public class Offer extends DomainEntity {
 
 	@NotNull
 	@Valid
-	private Money				offer;
+	private Money				money;
 
 	//Ticker
-	@Pattern(regexp = "O\\p{Upper}{4}-[0-9]{5}")
+	@Pattern(regexp = "O\\p{Upper}{4}-[0-9]{5}", message = "Ticker doesn't follow the pattern, OXXXX-99999, where “O” is letter “O”, “X” denotes an arbitrary letter and “9” denotes an arbitrary digit ")
 	@Column(unique = true)
-	@NotBlank
+	@NotNull
 	private String				ticker;
 
 }

@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.requests;
+package acme.features.provider.requests;
 
 import java.util.Collection;
 
@@ -7,15 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.requests.Request;
+import acme.entities.roles.Provider;
 import acme.framework.components.Model;
-import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedRequestListService implements AbstractListService<Authenticated, Request> {
+public class ProviderRequestListService implements AbstractListService<Provider, Request> {
 
 	@Autowired
-	AuthenticatedRequestRepository repository;
+	ProviderRequestRepository repository;
 
 
 	@Override
@@ -45,7 +45,5 @@ public class AuthenticatedRequestListService implements AbstractListService<Auth
 
 		return result;
 	}
-
-	//AbstractListService<Administrator, Request> interface
 
 }

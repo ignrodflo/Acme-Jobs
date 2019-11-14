@@ -1,5 +1,5 @@
 
-package acme.features.administrator.sysconfig;
+package acme.features.provider.requests;
 
 import javax.annotation.PostConstruct;
 
@@ -7,25 +7,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.sysconfig.Sysconfig;
+import acme.entities.requests.Request;
+import acme.entities.roles.Provider;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
-import acme.framework.entities.Administrator;
 
 @Controller
-@RequestMapping("/administrator/sysconfig/")
-public class AdministratorSysconfigController extends AbstractController<Administrator, Sysconfig> {
+@RequestMapping("/provider/request/")
+public class ProviderRequestController extends AbstractController<Provider, Request> {
 
 	//Internal state
 
 	@Autowired
-	private AdministratorSysconfigListService	listService;
+	private ProviderRequestListService		listService;
 
 	@Autowired
-	private AdministratorSysconfigShowService	showService;
+	private ProviderRequestShowService		showService;
 
 	@Autowired
-	private AdministratorSysconfigUpdateService	updateService;
+	private ProviderRequestCreateService	createService;
 
 
 	//Constructores
@@ -34,7 +34,7 @@ public class AdministratorSysconfigController extends AbstractController<Adminis
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
-		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 	}
 
 }
