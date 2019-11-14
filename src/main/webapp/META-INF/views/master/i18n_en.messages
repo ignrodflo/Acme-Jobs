@@ -59,6 +59,8 @@ master.menu.administrator.shutdown = Shut down
 master.menu.administrator.announcements = Announcements
 master.menu.administrator.announcements.create = Create announcement
 master.menu.administrator.sysconfig = System Configuration
+master.menu.administrator.companyrecords.list = Company Records
+master.menu.administrator.companyrecords.create = Create Company Record
 
 # master.menu.provider ########################################################
 

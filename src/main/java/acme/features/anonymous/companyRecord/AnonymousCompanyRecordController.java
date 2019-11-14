@@ -1,5 +1,5 @@
 
-package acme.features.anonymous.comprecords;
+package acme.features.anonymous.companyRecord;
 
 import javax.annotation.PostConstruct;
 
@@ -7,22 +7,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.comprecords.Comprecord;
+import acme.entities.companyRecords.CompanyRecord;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Anonymous;
 
 @Controller
-@RequestMapping("/anonymous/comprecord/")
-public class AnonymousComprecordController extends AbstractController<Anonymous, Comprecord> {
+@RequestMapping("/anonymous/company-record/")
+public class AnonymousCompanyRecordController extends AbstractController<Anonymous, CompanyRecord> {
 
 	//Internal state
 
 	@Autowired
-	private AnonymousComprecordListService	listService;
+	private AnonymousCompanyRecordListService	listService;
 
 	@Autowired
-	private AnonymousComprecordShowService	showService;
+	private AnonymousCompanyRecordShowService	showService;
 
 
 	//Constructores

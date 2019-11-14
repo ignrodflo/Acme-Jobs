@@ -1,13 +1,13 @@
 
-package acme.entities.comprecords;
+package acme.entities.companyRecords;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Range;
+import org.hibernate.validator.constraints.URL;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -16,7 +16,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Comprecord extends DomainEntity {
+public class CompanyRecord extends DomainEntity {
 
 	//Identificador
 
@@ -25,37 +25,31 @@ public class Comprecord extends DomainEntity {
 	//Atributos
 
 	@NotBlank
-	@NotNull
 	private String				companyname;
 
 	@NotBlank
-	@NotNull
 	private String				sector;
 
 	@NotBlank
-	@NotNull
 	private String				ceoname;
 
 	@NotBlank
-	@NotNull
 	private String				activdescription;
 
 	@NotBlank
-	@NotNull
+	@URL
 	private String				website;
 
+	// Message added to pattern to make the error message more readable to users. Not completely needed
 	@NotBlank
-	@NotNull
-	@Pattern(regexp = "^((?:[+][0-9]{1,3})?(?:[ ]{1})?(?:[\\(]{1})?(?:[0-9]{0,4})?(?:[\\)]{1})?[ ]{1}[0-9]{6,10})$")
+	@Pattern(regexp = "^(?:((?:[+][0-9]{1,3})?(?:[ ]{1})?(?:[\\(]{1})?(?:[0-9]{0,4})?(?:[\\)]{1})?[ ]{1})?)([0-9]{6,10})$", message = "+XX (XXX) YYYYYYXXXX")
 	private String				phone;
 
 	@NotBlank
 	@Email
-	@NotNull
 	private String				email;
 
-	@NotNull
-	private Boolean				incorporated;
+	private boolean				incorporated;
 
 	@Range(min = 0, max = 5)
 	private String				rating;
