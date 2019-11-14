@@ -49,9 +49,13 @@
 			<acme:menu-suboption code="master.menu.administrator.announcements" action="/administrator/announcement/list"/>	
 			<acme:menu-suboption code="master.menu.administrator.announcements.create" action="/administrator/announcement/create"/>
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.challenges" action="/administrator/challenge/list"/>	
+			<acme:menu-suboption code="master.menu.administrator.challenges.create" action="/administrator/challenge/create"/>	
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.sysconfig" action="/administrator/sysconfig/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
+			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
