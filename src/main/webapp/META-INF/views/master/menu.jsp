@@ -19,12 +19,11 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-      			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.announcements" action="/anonymous/announcement/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.investorrecord" action="/anonymous/investor/list"/>
 			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.anonymous.companyrecords" action="/anonymous/comprecord/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.companyrecords" action="/anonymous/company-record/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="hasRole('Authenticated')">
@@ -33,7 +32,7 @@
 			  	<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.challenge" action="/authenticated/challenge/list"/>
         			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.authenticated.companyrecords" action="/authenticated/comprecord/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.companyrecords" action="/authenticated/company-record/list"/>
 			 	<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.investorrecords" action="/authenticated/investor/list"/>
 			 	<acme:menu-separator/>
@@ -51,6 +50,10 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.investor" action="/administrator/investor/list"/>	
 			<acme:menu-suboption code="master.menu.administrator.investor.create" action="/administrator/investor/create"/>
+	    <acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.companyrecords.list" action="/administrator/company-record/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.companyrecords.create" action="/administrator/company-record/create"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.sysconfig" action="/administrator/sysconfig/list"/>
 			<acme:menu-separator/>

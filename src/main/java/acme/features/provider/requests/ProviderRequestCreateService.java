@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.requests.Request;
 import acme.entities.roles.Provider;
 import acme.framework.components.Errors;
+import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
 import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractCreateService;
@@ -47,6 +48,13 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		assert model != null;
 
 		request.unbind(entity, model, "ticker", "title", "creationMoment", "deadLine", "text", "reward");
+
+		if (request.isMethod(HttpMethod.GET)) {
+			model.setAttribute("accept", "false");
+		} else {
+			request.transfer(model, "accept");
+		}
+
 	}
 
 	@Override
@@ -68,20 +76,25 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		//Validaciones
 
 		boolean isAccepted, isDuplicated, isEuroZone;
+
 		Money money;
 		String eur = "EUR";
 
 		money = entity.getReward();
 		String money2 = money.toString();
 
+		//Checkbox
 		isAccepted = request.getModel().getBoolean("accept");
 		errors.state(request, isAccepted, "accept", "provider.request.error.must-accept");
 
+		//Ticker duplicado
 		isDuplicated = this.repository.findOneRequestByTicker(entity.getTicker()) != null;
 		errors.state(request, !isDuplicated, "ticker", "provider.request.error.duplicated");
 
+		//Moneda EUR
 		isEuroZone = money2.contains(eur);
 		errors.state(request, isEuroZone, "reward", "provider.request.error.money-no-euro");
+
 	}
 
 	@Override
