@@ -48,6 +48,9 @@
 			<acme:menu-suboption code="master.menu.administrator.announcements" action="/administrator/announcement/list"/>	
 			<acme:menu-suboption code="master.menu.administrator.announcements.create" action="/administrator/announcement/create"/>
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.investor" action="/administrator/investor/list"/>	
+			<acme:menu-suboption code="master.menu.administrator.investor.create" action="/administrator/investor/create"/>
+	    <acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.companyrecords.list" action="/administrator/company-record/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.companyrecords.create" action="/administrator/company-record/create"/>
