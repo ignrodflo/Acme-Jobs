@@ -10,6 +10,9 @@ authenticated.challenge.form.label.rewardSilver = Recompensa Plata:
 authenticated.challenge.form.label.rewardGold = Recompensa Oro:
 
 authenticated.challenge.form.button.return = Volver
+administrator.challenge.form.button.update = Actualizar
+administrator.challenge.form.button.create = Crear Reto
+administrator.challenge.form.button.delete = Borrar
 
 authenticated.challenge.list.label.moment = Fecha
 authenticated.challenge.list.label.title = Titulo

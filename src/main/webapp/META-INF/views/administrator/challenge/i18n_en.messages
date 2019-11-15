@@ -10,6 +10,9 @@ authenticated.challenge.form.label.rewardSilver = Silver Reward:
 authenticated.challenge.form.label.rewardGold = Gold Reward:
 
 authenticated.challenge.form.button.return = Return
+administrator.challenge.form.button.update = Update
+administrator.challenge.form.button.create = Create challenge
+administrator.challenge.form.button.delete = Delete
 
 authenticated.challenge.list.label.moment = Moment
 authenticated.challenge.list.label.title = Title
