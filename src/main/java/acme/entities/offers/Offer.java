@@ -32,7 +32,7 @@ public class Offer extends DomainEntity {
 	@NotBlank
 	private String				title;
 
-	@NotNull
+	//@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	private Date				moment;
@@ -49,12 +49,13 @@ public class Offer extends DomainEntity {
 
 	@NotNull
 	@Valid
-	private Money				offer;
+	private Money				money;
 
 	//Ticker
+
 	@Pattern(regexp = "O\\p{Lu}{4}-\\d{5}")
 	@Column(unique = true)
-	@NotBlank
+	@NotNull
 	private String				ticker;
 
 }

@@ -86,7 +86,7 @@
 		<property name="moment" value="2019/06/10 10:35"/>
 		<property name="deadLine" value="2020/01/01 00:59"/>
 		<property name="text" value="This is the description of a sample offer"/>
-		<property name="offer" value="EUR 1000.0"/>
+		<property name="money" value="EUR 1000.0"/>
 		<property name="ticker" value="OXXXX-99999"/>
 	</bean>
 	
@@ -95,7 +95,7 @@
 		<property name="moment" value="2018/03/10 10:35"/>
 		<property name="deadLine" value="2020/01/02 03:59"/>
 		<property name="text" value="This is the second description of a sample offer"/>
-		<property name="offer" value="EUR 1220.0"/>
+		<property name="money" value="EUR 1220.0"/>
 		<property name="ticker" value="ODRTX-95999"/>
 	</bean>
 	
@@ -104,7 +104,7 @@
 		<property name="moment" value="2013/06/10 10:35"/>
 		<property name="deadLine" value="2021/01/03 04:59"/>
 		<property name="text" value="This is the third description of a sample offer"/>
-		<property name="offer" value="EUR 2220.0"/>
+		<property name="money" value="EUR 2220.0"/>
 		<property name="ticker" value="OABVD-95499"/>
 	</bean>
 
@@ -140,7 +140,7 @@
 		<property name="ticker" value="RADFJ-23441"/>
 		<property name="title" value="Sample request 01"/>
 		<property name="creationMoment" value="2019/07/12 12:15"/>
-		<property name="deadline" value="2020/07/12 12:15"/>
+		<property name="deadLine" value="2020/07/12 12:15"/>
 		<property name="text" value="This is the description of a sample request"/>
 		<property name="reward" value="EUR 1200.0"/>
 		
@@ -150,7 +150,7 @@
 		<property name="ticker" value="RFREG-23512"/>
 		<property name="title" value="Sample request 02"/>
 		<property name="creationMoment" value="2019/07/02 12:15"/>
-		<property name="deadline" value="2020/07/12 12:15"/>
+		<property name="deadLine" value="2020/07/12 12:15"/>
 		<property name="text" value="This is the description of a sample request"/>
 		<property name="reward" value="EUR 1220.0"/>
 		
@@ -160,7 +160,7 @@
 		<property name="ticker" value="RHJRX-77654"/>
 		<property name="title" value="Sample request 03"/>
 		<property name="creationMoment" value="2019/07/12 12:15"/>
-		<property name="deadline" value="2020/07/12 12:15"/>
+		<property name="deadLine" value="2020/07/12 12:15"/>
 		<property name="text" value="This is the description of a sample request"/>
 		<property name="reward" value="EUR 1440.0"/>	
 	</bean>

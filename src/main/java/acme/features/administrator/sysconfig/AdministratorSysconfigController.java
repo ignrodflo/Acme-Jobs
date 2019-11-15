@@ -24,6 +24,9 @@ public class AdministratorSysconfigController extends AbstractController<Adminis
 	@Autowired
 	private AdministratorSysconfigShowService	showService;
 
+	@Autowired
+	private AdministratorSysconfigUpdateService	updateService;
+
 
 	//Constructores
 
@@ -31,6 +34,7 @@ public class AdministratorSysconfigController extends AbstractController<Adminis
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 	}
 
 }

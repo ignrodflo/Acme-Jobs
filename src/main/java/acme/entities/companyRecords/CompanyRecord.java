@@ -40,8 +40,9 @@ public class CompanyRecord extends DomainEntity {
 	@URL
 	private String				website;
 
+	// Message added to pattern to make the error message more readable to users. Not completely needed
 	@NotBlank
-	@Pattern(regexp = "^((?:[+][0-9]{1,3})?(?:[ ]{1})?(?:[\\(]{1})?(?:[0-9]{0,4})?(?:[\\)]{1})?[ ]{1}[0-9]{6,10})$")
+	@Pattern(regexp = "^(?:((?:[+][0-9]{1,3})?(?:[ ]{1})?(?:[\\(]{1})?(?:[0-9]{0,4})?(?:[\\)]{1})?[ ]{1})?)([0-9]{6,10})$", message = "+XX (XXX) YYYYYYXXXX")
 	private String				phone;
 
 	@NotBlank

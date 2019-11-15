@@ -2,6 +2,8 @@
 package acme.entities.sysconfig;
 
 import javax.persistence.Entity;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -18,8 +20,10 @@ public class Sysconfig extends DomainEntity {
 
 	// Atributos
 
+	@NotBlank
 	private String				spamwords;
 
+	@NotNull
 	private Double				threshold;
 
 	// Atributos derivados

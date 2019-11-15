@@ -12,7 +12,11 @@ administrator.announcement.form.label.moment = Momento:
 administrator.announcement.form.label.title = Título:
 administrator.announcement.form.label.moreInfo = Más info:
 administrator.announcement.form.label.text = Texto:
+
 administrator.announcement.form.button.return = Volver
+administrator.announcement.form.button.create = Crear Anuncio
+administrator.announcement.form.button.delete = Borrar
+administrator.announcement.form.button.update = Actualizar
 
 administrator.announcement.list.label.moment = Momento
 administrator.announcement.list.label.title = Título

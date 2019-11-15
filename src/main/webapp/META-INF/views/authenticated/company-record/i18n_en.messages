@@ -17,7 +17,7 @@ authenticated.company-record.form.label.activDescription = Activity Description:
 authenticated.company-record.form.label.website = Website:
 authenticated.company-record.form.label.phone = Phone Number:
 authenticated.company-record.form.label.email = E-mail:
-authenticated.company-record.form.label.incorporated: Incorporated:
+authenticated.company-record.form.label.incorporated: Incorporated
 authenticated.company-record.form.label.rating = Rating:
 
 authenticated.company-record.button.return = Return

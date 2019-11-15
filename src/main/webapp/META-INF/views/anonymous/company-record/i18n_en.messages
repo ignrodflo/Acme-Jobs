@@ -17,7 +17,7 @@ anonymous.company-record.form.label.activDescription = Activity Description:
 anonymous.company-record.form.label.website = Website:
 anonymous.company-record.form.label.phone = Phone Number:
 anonymous.company-record.form.label.email = E-mail:
-anonymous.company-record.form.label.incorporated: Incorporated:
+anonymous.company-record.form.label.incorporated: Incorporated
 anonymous.company-record.form.label.rating = Rating:
 
 anonymous.company-record.button.return = Return
