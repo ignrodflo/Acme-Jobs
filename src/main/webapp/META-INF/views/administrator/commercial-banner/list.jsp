@@ -16,10 +16,10 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="administrator.banner.commercialbanner.list.label.picture" path="picture" width="20%"/>
-	<acme:list-column code="administrator.banner.commercialbanner.list.label.slogan" path="slogan" width="20%"/>
-	<acme:list-column code="administrator.banner.commercialbanner.list.label.targetURL" path="targetURL" width="20%"/>
+	<acme:list-column code="administrator.commercial-banner.list.label.picture" path="picture" width="20%"/>
+	<acme:list-column code="administrator.commercial-banner.list.label.slogan" path="slogan" width="20%"/>
+	<acme:list-column code="administrator.commercial-banner.list.label.targetURL" path="targetURL" width="20%"/>
 </acme:list>
 
 
-<acme:form-submit code="administrator.banner.commercialbanner.form.button.create" action="/administrator/banners/commercial-banner/create"/>
+<acme:form-submit code="administrator.commercial-banner.form.button.create" action="/administrator/commercial-banner/create"/>

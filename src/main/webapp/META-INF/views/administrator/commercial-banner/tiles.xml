@@ -18,12 +18,12 @@
 	
 <tiles-definitions>
 	
-		<definition name="administrator/banners/commercial-banner/list" extends="master">
-			<put-attribute name="body" type="template" value="../administrator/banners/commercial-banner/list.jsp"/>
+		<definition name="administrator/commercial-banner/list" extends="master">
+			<put-attribute name="body" type="template" value="../administrator/commercial-banner/list.jsp"/>
 		</definition>
 		
-		<definition name="administrator/banners/commercial-banner/form" extends="master">
-			<put-attribute name="body" type="template" value="../administrator/banners/commercial-banner/form.jsp"/>
+		<definition name="administrator/commercial-banner/form" extends="master">
+			<put-attribute name="body" type="template" value="../administrator/commercial-banner/form.jsp"/>
 		</definition>
 
 </tiles-definitions>

@@ -1,5 +1,5 @@
 
-package acme.features.administrator.banners.commercialBanner;
+package acme.features.administrator.banner.commercialBanner;
 
 import javax.annotation.PostConstruct;
 
@@ -11,6 +11,9 @@ import acme.entities.banners.CommercialBanner;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Administrator;
+
+// IMPORTANTE: A pesar de que el RequestMapping es /administrator/banner/commercial-banner/
+// los servicios se configuraran en la carpeta views/administrator/commercial-banner/
 
 @Controller
 @RequestMapping("/administrator/banner/commercial-banner/")
