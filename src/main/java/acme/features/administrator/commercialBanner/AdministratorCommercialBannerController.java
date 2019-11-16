@@ -1,5 +1,5 @@
 
-package acme.features.administrator.banner.commercialBanner;
+package acme.features.administrator.commercialBanner;
 
 import javax.annotation.PostConstruct;
 
@@ -16,7 +16,7 @@ import acme.framework.entities.Administrator;
 // los servicios se configuraran en la carpeta views/administrator/commercial-banner/
 
 @Controller
-@RequestMapping("/administrator/banner/commercial-banner/")
+@RequestMapping("/administrator/commercial-banner/")
 public class AdministratorCommercialBannerController extends AbstractController<Administrator, CommercialBanner> {
 
 	//Internal state

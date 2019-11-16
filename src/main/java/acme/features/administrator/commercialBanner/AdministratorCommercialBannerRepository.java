@@ -1,5 +1,5 @@
 
-package acme.features.administrator.banner.commercialBanner;
+package acme.features.administrator.commercialBanner;
 
 import java.util.Collection;
 
