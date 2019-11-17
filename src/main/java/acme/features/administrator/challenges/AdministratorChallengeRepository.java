@@ -14,6 +14,6 @@ public interface AdministratorChallengeRepository extends AbstractRepository {
 
 	Challenge findOneById(int id);
 
-	@Query("Select a from Challenge a")
+	@Query("Select c from Challenge c")
 	Collection<Challenge> findManyAll();
 }

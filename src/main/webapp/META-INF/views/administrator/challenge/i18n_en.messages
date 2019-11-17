@@ -1,19 +1,21 @@
-authenticated.challenge.form.label.moment = Moment:
-authenticated.challenge.form.label.title = Title:
-authenticated.challenge.form.label.description = Description:
-authenticated.challenge.form.label.deadline = Dead Line:
-authenticated.challenge.form.label.goalBronze = Bronze Goal:
-authenticated.challenge.form.label.goalSilver = Silver Goal:
-authenticated.challenge.form.label.goalGold = Gold Goal:
-authenticated.challenge.form.label.rewardBronze = Bronze Reward:
-authenticated.challenge.form.label.rewardSilver = Silver Reward:
-authenticated.challenge.form.label.rewardGold = Gold Reward:
+administrator.challenge.form.label.moment = Moment:
+administrator.challenge.form.label.title = Title:
+administrator.challenge.form.label.description = Description:
+administrator.challenge.form.label.deadline = Dead Line:
+administrator.challenge.form.label.goalBronze = Bronze Goal:
+administrator.challenge.form.label.goalSilver = Silver Goal:
+administrator.challenge.form.label.goalGold = Gold Goal:
+administrator.challenge.form.label.rewardBronze = Bronze Reward:
+administrator.challenge.form.label.rewardSilver = Silver Reward:
+administrator.challenge.form.label.rewardGold = Gold Reward:
 
-authenticated.challenge.form.button.return = Return
+administrator.challenge.form.button.return = Return
 administrator.challenge.form.button.update = Update
 administrator.challenge.form.button.create = Create challenge
 administrator.challenge.form.button.delete = Delete
 
-authenticated.challenge.list.label.moment = Moment
-authenticated.challenge.list.label.title = Title
-authenticated.challenge.list.label.deadline = Dead Line
+administrator.challenge.list.label.moment = Moment
+administrator.challenge.list.label.title = Title
+administrator.challenge.list.label.deadline = Dead Line
+
+administrator.challenge.error.money-no-euro = It must be in Euro

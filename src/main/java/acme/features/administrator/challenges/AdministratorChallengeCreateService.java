@@ -67,22 +67,25 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		assert errors != null;
 
 		boolean isEuroZoneB, isEuroZoneS, isEuroZoneG;
-		Money money;
+		Money moneyB, moneyS, moneyG;
 		String eur = "EUR";
 
-		money = entity.getRewardBronze();
-		String moneyB = money.toString();
-		money = entity.getRewardSilver();
-		String moneyS = money.toString();
+		moneyB = entity.getRewardBronze();
+		String moneyBtoString = moneyB.toString();
 
-		money = entity.getRewardGold();
-		String moneyG = money.toString();
+		moneyS = entity.getRewardSilver();
+		String moneyStoString = moneyS.toString();
 
-		isEuroZoneB = moneyB.contains(eur);
+		moneyG = entity.getRewardGold();
+		String moneyGtoString = moneyG.toString();
+
+		isEuroZoneB = moneyBtoString.contains(eur);
 		errors.state(request, isEuroZoneB, "rewardBronze", "administrator.challenge.error.money-no-euro");
-		isEuroZoneS = moneyS.contains(eur);
+
+		isEuroZoneS = moneyStoString.contains(eur);
 		errors.state(request, isEuroZoneS, "rewardSilver", "administrator.challenge.error.money-no-euro");
-		isEuroZoneG = moneyG.contains(eur);
+
+		isEuroZoneG = moneyGtoString.contains(eur);
 		errors.state(request, isEuroZoneG, "rewardGold", "administrator.challenge.error.money-no-euro");
 
 	}
