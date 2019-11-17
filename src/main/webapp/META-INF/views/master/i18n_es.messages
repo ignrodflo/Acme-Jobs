@@ -52,11 +52,20 @@ master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.announcements = Anuncios
 master.menu.administrator.announcements.create = Crear Anuncio
+master.menu.administrator.banners = Banners
+master.menu.administrator.banners.commercial-banner = Banners Comerciales
+master.menu.administrator.banners.commercial-banner.create = Crear Banner Comercial
 master.menu.administrator.investor = Registros de Inversores
 master.menu.administrator.investor.create = Añadir inversor
 master.menu.administrator.sysconfig = Configuración del Sistema
 master.menu.administrator.companyrecords.list = Archivos de las Compañías
 master.menu.administrator.companyrecords.create = Crear Archivo de Compañía
+
+master.menu.administrator.banners = Banners
+master.menu.administrator.banners.commercial-banner = Comercial
+master.menu.administrator.banners.commercial-banner.create = Crear banner comercial
+master.menu.administrator.banners.non-commercial-banner = No Comercial
+master.menu.administrator.banners.non-commercial-banner.create = Crear banner no comercial
 
 # master.menu.provider ########################################################
 

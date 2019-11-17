@@ -64,6 +64,13 @@ master.menu.administrator.sysconfig = System Configuration
 master.menu.administrator.companyrecords.list = Company Records
 master.menu.administrator.companyrecords.create = Create Company Record
 
+master.menu.administrator.banners = Banners
+master.menu.administrator.banners.commercial-banner = Commercial
+master.menu.administrator.banners.commercial-banner.create = Create Commercial Banner
+master.menu.administrator.banners.non-commercial-banner = Non Commercial 
+master.menu.administrator.banners.non-commercial-banner.create = Create Non Commercial Banner
+
+
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider

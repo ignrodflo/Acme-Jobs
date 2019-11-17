@@ -40,7 +40,13 @@
         			<acme:menu-separator/>
       		<acme:menu-suboption code="master.menu.authenticated.request" action="/authenticated/request/list"/>     		      		
 		</acme:menu-option>
-
+		<acme:menu-option code="master.menu.administrator.banners" access="hasRole('Administrator')">
+			<acme:menu-suboption code="master.menu.administrator.banners.commercial-banner" action="/administrator/commercial-banner/list"/>	
+			<acme:menu-suboption code="master.menu.administrator.banners.commercial-banner.create" action="/administrator/commercial-banner/create"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.banners.non-commercial-banner" action="/administrator/non-commercial-banner/list"/>	
+			<acme:menu-suboption code="master.menu.administrator.banners.non-commercial-banner.create" action="/administrator/non-commercial-banner/create"/>
+		</acme:menu-option>
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>

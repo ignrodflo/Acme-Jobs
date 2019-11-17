@@ -16,9 +16,10 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="administrator.investor.list.label.sector" path="sector" width="60%"/>
-	<acme:list-column code="administrator.investor.list.label.name" path="name" width="20%"/>
-	<acme:list-column code="administrator.investor.list.label.star" path="star" width="20%"/>
+	<acme:list-column code="administrator.non-commercial-banner.list.label.picture" path="picture" width="20%"/>
+	<acme:list-column code="administrator.non-commercial-banner.list.label.slogan" path="slogan" width="20%"/>
+	<acme:list-column code="administrator.non-commercial-banner.list.label.targetURL" path="targetURL" width="20%"/>
 </acme:list>
 
-<acme:menu-option code="administrator.investor.form.button.create" action="/administrator/investor/create"/>
+<acme:menu-option code="administrator.non-commercial-banner.form.button.create" action="/administrator/non-commercial-banner/create"/>
+
