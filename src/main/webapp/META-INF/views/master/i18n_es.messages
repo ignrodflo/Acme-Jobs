@@ -32,7 +32,7 @@ master.menu.anonymous.announcements = Anuncios
 # master.menu.investor #######################################################
 master.menu.anonymous.investor = Registros
 master.menu.anonymous.investorrecord = Registro de inversores
-master.menu.anonymous.companyrecords = Archivos de la Compañía
+master.menu.anonymous.companyrecords = Archivos de las Compañías
 
 # master.menu.authenticated #######################################################
 
@@ -40,7 +40,7 @@ master.menu.authenticated = Autentificado
 master.menu.authenticated.announcement = Anuncios
 master.menu.authenticated.challenge = Desafios
 master.menu.authenticated.offer = Ofertas
-master.menu.authenticated.companyrecords = Archivos de la Compañía
+master.menu.authenticated.companyrecords = Archivos de las Compañías
 master.menu.authenticated.request = Solicitudes
 master.menu.authenticated.investorrecords = Registros de Inversores
 
@@ -54,7 +54,18 @@ master.menu.administrator.announcements = Anuncios
 master.menu.administrator.announcements.create = Crear Anuncio
 master.menu.administrator.challenges = Reto
 master.menu.administrator.challenges.create = Crear reto
+master.menu.administrator.investor = Registros de Inversores
+master.menu.administrator.investor.create = Añadir inversor
+
 master.menu.administrator.sysconfig = Configuración del Sistema
+master.menu.administrator.companyrecords.list = Archivos de las Compañías
+master.menu.administrator.companyrecords.create = Crear Archivo de Compañía
+
+master.menu.administrator.banners = Banners
+master.menu.administrator.banners.commercial-banner = Comercial
+master.menu.administrator.banners.commercial-banner.create = Crear banner comercial
+master.menu.administrator.banners.non-commercial-banner = No Comercial
+master.menu.administrator.banners.non-commercial-banner.create = Crear banner no comercial
 
 # master.menu.provider ########################################################
 

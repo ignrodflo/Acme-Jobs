@@ -30,6 +30,15 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `banner` (
+       `id` integer not null,
+        `version` integer not null,
+        `picture` varchar(255),
+        `slogan` varchar(255),
+        `targeturl` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `challenge` (
        `id` integer not null,
         `version` integer not null,
@@ -52,21 +61,21 @@
     create table `commercial_banner` (
        `id` integer not null,
         `version` integer not null,
-        `credit_card` varchar(255),
         `picture` varchar(255),
         `slogan` varchar(255),
         `targeturl` varchar(255),
+        `credit_card` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `comprecord` (
+    create table `company_record` (
        `id` integer not null,
         `version` integer not null,
         `activdescription` varchar(255),
         `ceoname` varchar(255),
         `companyname` varchar(255),
         `email` varchar(255),
-        `incorporated` bit,
+        `incorporated` bit not null,
         `phone` varchar(255),
         `rating` varchar(255),
         `sector` varchar(255),
@@ -96,10 +105,10 @@
     create table `non_commercial_banner` (
        `id` integer not null,
         `version` integer not null,
-        `jingle` varchar(255),
         `picture` varchar(255),
         `slogan` varchar(255),
         `targeturl` varchar(255),
+        `jingle` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -108,8 +117,8 @@
         `version` integer not null,
         `dead_line` datetime(6),
         `moment` datetime(6),
-        `offer_amount` double precision,
-        `offer_currency` varchar(255),
+        `money_amount` double precision,
+        `money_currency` varchar(255),
         `text` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),
@@ -129,7 +138,7 @@
        `id` integer not null,
         `version` integer not null,
         `creation_moment` datetime(6),
-        `deadline` datetime(6),
+        `dead_line` datetime(6),
         `reward_amount` double precision,
         `reward_currency` varchar(255),
         `text` varchar(255),

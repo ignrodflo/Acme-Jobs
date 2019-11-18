@@ -35,6 +35,9 @@ public class AuthenticatedConsumerController extends AbstractController<Authenti
 	@Autowired
 	private AuthenticatedConsumerUpdateService	updateService;
 
+	@Autowired
+	private AuthenticatedConsumerShowService	showService;
+
 
 	// Constructors -----------------------------------------------------------
 
@@ -42,6 +45,7 @@ public class AuthenticatedConsumerController extends AbstractController<Authenti
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 
 }
