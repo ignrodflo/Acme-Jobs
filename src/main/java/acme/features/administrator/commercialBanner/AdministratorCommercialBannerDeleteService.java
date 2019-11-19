@@ -44,7 +44,7 @@ public class AdministratorCommercialBannerDeleteService implements AbstractDelet
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "picture", "slogan", "targetURL", "creditCard");
+		request.unbind(entity, model, "picture", "slogan", "targetURL", "accountHolder", "creditCardNumber", "expirationDate", "cvv");
 	}
 
 	@Override

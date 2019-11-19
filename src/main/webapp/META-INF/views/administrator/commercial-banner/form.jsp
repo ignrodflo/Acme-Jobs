@@ -7,7 +7,10 @@
 	<acme:form-url code="administrator.commercial-banner.form.label.picture" path="picture"/>
 	<acme:form-url code="administrator.commercial-banner.form.label.slogan" path="slogan"/>
 	<acme:form-url code="administrator.commercial-banner.form.label.targetURL" path="targetURL"/>
-	<acme:form-textbox code="administrator.commercial-banner.form.label.creditCard" path="creditCard"/>
+	<acme:form-textbox code="administrator.commercial-banner.form.label.accountHolder" path="accountHolder"/>
+	<acme:form-textbox code="administrator.commercial-banner.form.label.creditCardNumber" path="creditCardNumber"/>
+	<acme:form-moment code="administrator.commercial-banner.form.label.expirationDate" path="expirationDate"/>
+	<acme:form-textbox code="administrator.commercial-banner.form.label.cvv" path="cvv"/>
 	
 	<acme:form-submit test="${command == 'show'}"
 		code="administrator.commercial-banner.form.button.update"

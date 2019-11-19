@@ -60,7 +60,10 @@
 		<property name="picture" value="http://www.picture.com"/>
 		<property name="slogan" value="http://www.slogan.com"/>
 		<property name="targetURL" value="http://www.targetURL.com"/>
-		<property name="creditCard" value="123 456 789 0"/>
+		<property name="accountHolder" value="Alfredo Diaz Perez"/>
+		<property name="creditCardNumber" value="5390700823285988"/>
+		<property name="expirationDate" value="2019/12/12 00:00"/>
+		<property name="cvv" value="123"/>
 	</bean>
 	
   <!-- NonCommercialBanner beans -->
