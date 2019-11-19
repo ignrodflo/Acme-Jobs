@@ -37,6 +37,16 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		assert entity != null;
 		assert errors != null;
 
+		Date moment;
+		moment = new Date(System.currentTimeMillis() - 1);
+		entity.setCreationMoment(moment);
+
+		Money money;
+		money = new Money();
+		money.setAmount(0.0);
+		money.setCurrency("EUR");
+		entity.setReward(money);
+
 		request.bind(entity, errors, "creationMoment");
 
 	}
@@ -77,11 +87,10 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 
 		boolean isAccepted, isDuplicated, isEuroZone;
 
-		Money money;
+		String currency;
 		String eur = "EUR";
 
-		money = entity.getReward();
-		String money2 = money.toString();
+		currency = entity.getReward().getCurrency();
 
 		//Checkbox
 		isAccepted = request.getModel().getBoolean("accept");
@@ -92,7 +101,7 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		errors.state(request, !isDuplicated, "ticker", "provider.request.error.duplicated");
 
 		//Moneda EUR
-		isEuroZone = money2.contains(eur);
+		isEuroZone = currency.equals(eur);
 		errors.state(request, isEuroZone, "reward", "provider.request.error.money-no-euro");
 
 	}

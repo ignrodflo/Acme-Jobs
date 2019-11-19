@@ -36,6 +36,16 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert errors != null;
 
+		Date moment;
+		moment = new Date(System.currentTimeMillis() - 1);
+		entity.setMoment(moment);
+
+		Money money;
+		money = new Money();
+		money.setAmount(0.0);
+		money.setCurrency("EUR");
+		entity.setMoney(money);
+
 		request.bind(entity, errors, "moment");
 
 	}
@@ -72,11 +82,10 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 
 		boolean isAccepted, isDuplicated, isEuroZone;
 
-		Money money;
+		String currency;
 		String eur = "EUR";
 
-		money = entity.getMoney();
-		String money2 = money.toString();
+		currency = entity.getMoney().getCurrency();
 
 		//Checkbox
 		isAccepted = request.getModel().getBoolean("accept");
@@ -87,7 +96,7 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		errors.state(request, !isDuplicated, "ticker", "consumer.offer.error.duplicated");
 
 		//Moneda EUR
-		isEuroZone = money2.contains(eur);
+		isEuroZone = currency.equals(eur);
 		errors.state(request, isEuroZone, "money", "consumer.offer.error.money-no-euro");
 
 	}
