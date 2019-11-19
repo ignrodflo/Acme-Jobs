@@ -19,3 +19,6 @@ administrator.challenge.list.label.title = Title
 administrator.challenge.list.label.deadline = Dead Line
 
 administrator.challenge.error.money-no-euro = It must be in Euro
+administrator.challenge.error.rewardNoValidB = The bronze reward must be less than silver and gold
+administrator.challenge.error.rewardNoValidS = The silver level reward must be between bronze and gold
+administrator.challenge.error.rewardNoValidG = The gold level reward must be greater than silver and bronze

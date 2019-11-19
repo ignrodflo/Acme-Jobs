@@ -68,25 +68,36 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 		assert entity != null;
 		assert errors != null;
 
-		boolean isEuroZoneB, isEuroZoneS, isEuroZoneG;
-		Money money;
+		boolean isEuroZoneB, isEuroZoneS, isEuroZoneG, isRewardBValid, isRewardSValid, isRewardGValid;
+		Money moneyB, moneyS, moneyG;
 		String eur = "EUR";
 
-		money = entity.getRewardBronze();
-		String moneyB = money.toString();
-		money = entity.getRewardSilver();
-		String moneyS = money.toString();
+		moneyB = entity.getRewardBronze();
 
-		money = entity.getRewardGold();
-		String moneyG = money.toString();
+		moneyS = entity.getRewardSilver();
 
-		isEuroZoneB = moneyB.contains(eur);
-		errors.state(request, isEuroZoneB, "rewardBronze", "administrator.challenge.error.money-no-euro");
-		isEuroZoneS = moneyS.contains(eur);
-		errors.state(request, isEuroZoneS, "rewardSilver", "administrator.challenge.error.money-no-euro");
-		isEuroZoneG = moneyG.contains(eur);
-		errors.state(request, isEuroZoneG, "rewardGold", "administrator.challenge.error.money-no-euro");
+		moneyG = entity.getRewardGold();
 
+		if (moneyB != null && moneyS != null && moneyG != null) {
+
+			isEuroZoneB = moneyB.getCurrency().contains(eur);
+			errors.state(request, isEuroZoneB, "rewardBronze", "administrator.challenge.error.money-no-euro");
+
+			isEuroZoneS = moneyS.getCurrency().contains(eur);
+			errors.state(request, isEuroZoneS, "rewardSilver", "administrator.challenge.error.money-no-euro");
+
+			isEuroZoneG = moneyG.getCurrency().contains(eur);
+			errors.state(request, isEuroZoneG, "rewardGold", "administrator.challenge.error.money-no-euro");
+
+			isRewardBValid = moneyB.getAmount() < moneyS.getAmount() && moneyB.getAmount() < moneyG.getAmount();
+			errors.state(request, isRewardBValid, "rewardBronze", "administrator.challenge.error.rewardNoValidB");
+
+			isRewardSValid = moneyB.getAmount() < moneyS.getAmount() && moneyS.getAmount() < moneyG.getAmount();
+			errors.state(request, isRewardSValid, "rewardSilver", "administrator.challenge.error.rewardNoValidS");
+
+			isRewardGValid = moneyB.getAmount() < moneyG.getAmount() && moneyS.getAmount() < moneyG.getAmount();
+			errors.state(request, isRewardGValid, "rewardGold", "administrator.challenge.error.rewardNoValidG");
+		}
 	}
 
 	@Override
