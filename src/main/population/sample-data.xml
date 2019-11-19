@@ -124,7 +124,7 @@
 		<property name="phone" value="+34 (9) 657036241"/>
 		<property name="email" value="pedcobram@alum.us.es"/>
 		<property name="incorporated" value="False"/>
-		<property name="rating" value="3"/>
+		<property name="rating"><null/></property>
 	</bean>
 	
 	<bean id="record02" class="acme.entities.companyRecords.CompanyRecord">

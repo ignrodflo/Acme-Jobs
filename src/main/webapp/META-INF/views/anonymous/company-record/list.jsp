@@ -19,5 +19,5 @@
 	<acme:list-column code="anonymous.company-record.list.label.companyName" path="companyname" width="25%"/>
 	<acme:list-column code="anonymous.company-record.list.label.sector" path="sector" width="25%"/>
 	<acme:list-column code="anonymous.company-record.list.label.activDescription" path="activdescription" width="40%"/>
-	<acme:list-column code="anonymous.company-record.list.label.rating" path="rating" width="10%"/>
+	<acme:list-column code="anonymous.company-record.list.label.rating" path="rating" width="10%" />
 </acme:list>

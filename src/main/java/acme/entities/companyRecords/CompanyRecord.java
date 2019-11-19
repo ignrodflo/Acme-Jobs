@@ -6,7 +6,6 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
-import org.hibernate.validator.constraints.Range;
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.entities.DomainEntity;
@@ -51,6 +50,6 @@ public class CompanyRecord extends DomainEntity {
 
 	private boolean				incorporated;
 
-	@Range(min = 0, max = 5)
+	@Pattern(regexp = "^[0-5]|\\s*$")
 	private String				rating;
 }
