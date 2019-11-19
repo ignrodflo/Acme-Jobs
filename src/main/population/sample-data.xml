@@ -62,7 +62,9 @@
 		<property name="targetURL" value="http://www.targetURL.com"/>
 		<property name="accountHolder" value="Alfredo Diaz Perez"/>
 		<property name="creditCardNumber" value="5390700823285988"/>
-		<property name="expirationDate" value="2019/12/12 00:00"/>
+		<!--  <property name="expirationDate" value="2019/12/12 00:00"/>  -->
+		<property name="expirationMonth" value="12"/>
+		<property name="expirationYear" value="2024"/>
 		<property name="cvv" value="123"/>
 	</bean>
 	

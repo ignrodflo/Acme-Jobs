@@ -44,7 +44,7 @@ public class AdministratorCommercialBannerUpdateService implements AbstractUpdat
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "picture", "slogan", "targetURL", "accountHolder", "creditCardNumber", "expirationDate", "cvv");
+		request.unbind(entity, model, "picture", "slogan", "targetURL", "accountHolder", "creditCardNumber", "expirationMonth", "expirationYear", "cvv");
 	}
 
 	@Override

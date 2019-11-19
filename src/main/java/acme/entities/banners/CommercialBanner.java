@@ -1,15 +1,13 @@
 
 package acme.entities.banners;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.CreditCardNumber;
+import org.hibernate.validator.constraints.Range;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -31,9 +29,14 @@ public class CommercialBanner extends Banner {
 	private String				creditCardNumber;
 
 	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date				expirationDate;
+	@Range(min = 1, max = 12)
+	private Integer				expirationMonth;
+
+	@NotNull
+	@Pattern(regexp = "^\\d{4}$")
+	private String				expirationYear;
 
 	@NotBlank
+	@Pattern(regexp = "^\\d{3}$")
 	private String				cvv;
 }

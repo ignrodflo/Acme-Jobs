@@ -30,15 +30,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `banner` (
-       `id` integer not null,
-        `version` integer not null,
-        `picture` varchar(255),
-        `slogan` varchar(255),
-        `targeturl` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
     create table `challenge` (
        `id` integer not null,
         `version` integer not null,
@@ -64,7 +55,11 @@
         `picture` varchar(255),
         `slogan` varchar(255),
         `targeturl` varchar(255),
-        `credit_card` varchar(255),
+        `account_holder` varchar(255),
+        `credit_card_number` varchar(255),
+        `cvv` varchar(255),
+        `expiration_month` integer,
+        `expiration_year` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -172,6 +167,7 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
+create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
 
     alter table `offer` 
        add constraint UK_iex7e8fs0fh89yxpcnm1orjkm unique (`ticker`);
