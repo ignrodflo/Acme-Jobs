@@ -61,7 +61,7 @@ master.menu.administrator.sysconfig = Configuración del Sistema
 master.menu.administrator.companyrecords.list = Archivos de las Compañías
 master.menu.administrator.companyrecords.create = Crear Archivo de Compañía
 
-master.menu.administrator.banners.commercial-banner = Comercial
+master.menu.administrator.banners.commercial-banner = Comercial Banners
 master.menu.administrator.banners.commercial-banner.create = Crear banner comercial
 master.menu.administrator.banners.non-commercial-banner = No Comercial
 master.menu.administrator.banners.non-commercial-banner.create = Crear banner no comercial

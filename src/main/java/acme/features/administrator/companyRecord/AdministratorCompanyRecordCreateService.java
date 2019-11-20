@@ -61,6 +61,11 @@ public class AdministratorCompanyRecordCreateService implements AbstractCreateSe
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		String tlfn = entity.getPhone();
+		Boolean isMatch = tlfn.matches("^(?:((?:[+][0-9]{1,3})?(?:[ ]{1})?(?:[\\(]{1})?(?:[0-9]{0,4})?(?:[\\)]{1})?[ ]{1})?)([0-9]{6,10})$");
+		errors.state(request, isMatch, "phone", "company-record.form.error.phone");
+
 	}
 
 	@Override
