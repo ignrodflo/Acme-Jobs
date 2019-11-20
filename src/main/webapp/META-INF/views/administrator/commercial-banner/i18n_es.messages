@@ -18,7 +18,7 @@ administrator.commercial-banner.form.label.cvv = CVV:
 administrator.comercial-banner.error.creditCard = Tarjeta caducada
 
 administrator.commercial-banner.form.button.return = Volver
-administrator.commercial-banner.form.button.create = Añadir banner
+administrator.commercial-banner.form.button.create = Crear banner
 administrator.commercial-banner.form.button.delete = Borrar
 administrator.commercial-banner.form.button.update = Actualizar
 

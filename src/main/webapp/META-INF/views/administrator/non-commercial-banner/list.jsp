@@ -20,6 +20,3 @@
 	<acme:list-column code="administrator.non-commercial-banner.list.label.slogan" path="slogan" width="20%"/>
 	<acme:list-column code="administrator.non-commercial-banner.list.label.targetURL" path="targetURL" width="20%"/>
 </acme:list>
-
-<acme:menu-option code="administrator.non-commercial-banner.form.button.create" action="/administrator/non-commercial-banner/create"/>
-

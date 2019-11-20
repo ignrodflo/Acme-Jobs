@@ -14,7 +14,7 @@ administrator.investor.form.label.investingStatement =  Investing statement:
 administrator.investor.form.label.star = Number of stars:
 
 administrator.investor.form.button.return = Return
-administrator.investor.form.button.create = Add investor
+administrator.investor.form.button.create = Create record
 administrator.investor.form.button.delete = Delete
 administrator.investor.form.button.update = Update
 

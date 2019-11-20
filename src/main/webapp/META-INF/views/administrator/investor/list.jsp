@@ -21,4 +21,3 @@
 	<acme:list-column code="administrator.investor.list.label.star" path="star" width="20%"/>
 </acme:list>
 
-<acme:menu-option code="administrator.investor.form.button.create" action="/administrator/investor/create"/>
