@@ -11,13 +11,11 @@
 administrator.commercial-banner.form.label.picture = Picture(url):
 administrator.commercial-banner.form.label.slogan = Slogan(url):
 administrator.commercial-banner.form.label.targetURL = Enlace:
-administrator.commercial-banner.form.label.creditCard = Credit Card:
 administrator.commercial-banner.form.label.accountHolder = Account holder:
 administrator.commercial-banner.form.label.creditCardNumber: Credit card number:
 administrator.commercial-banner.form.label.expirationDate = Expiration date:
-administrator.commercial-banner.form.label.expirationMonth = Expiration month:
-administrator.commercial-banner.form.label.expirationYear = Expiration year:
 administrator.commercial-banner.form.label.cvv = CVV:
+administrator.comercial-banner.error.creditCard = Credit Card expired
 
 administrator.commercial-banner.form.button.return = Return
 administrator.commercial-banner.form.button.create = Add banner

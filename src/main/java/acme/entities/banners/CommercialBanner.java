@@ -3,11 +3,9 @@ package acme.entities.banners;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.CreditCardNumber;
-import org.hibernate.validator.constraints.Range;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -28,13 +26,9 @@ public class CommercialBanner extends Banner {
 	@CreditCardNumber
 	private String				creditCardNumber;
 
-	@NotNull
-	@Range(min = 1, max = 12)
-	private Integer				expirationMonth;
-
-	@NotNull
-	@Pattern(regexp = "^\\d{4}$")
-	private String				expirationYear;
+	@NotBlank
+	@Pattern(regexp = "^(1[0-2]|0[1-9]|\\d)\\/(\\d{2})$", message = "MM/YY")
+	private String				expirationDate;
 
 	@NotBlank
 	@Pattern(regexp = "^\\d{3}$")
