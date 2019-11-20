@@ -9,6 +9,8 @@ consumer.offer.form.label.accept = I confirm the creation
 consumer.offer.error.must-accept = Must accept the creation
 consumer.offer.error.duplicated = This ticker is already taken
 consumer.offer.error.money-no-euro = It must be in Euro
+consumer.offer.error.deadline = The Deadline must be one week later from now
+consumer.offer.error.ticker = Ticker doesn't follow the pattern, “O” is letter “O”, “X” denotes an arbitrary letter and “9” denotes an arbitrary digit
 
 consumer.offer.form.button.create = Create
 consumer.offer.form.button.return = Return

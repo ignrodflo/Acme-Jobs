@@ -49,9 +49,9 @@
 		<property name="goalBronze" value="Do a little"/>
 		<property name="goalSilver" value="Do something else"/>
 		<property name="goalGold" value="Do everything"/>
-		<property name="rewardBronze" value="5000.00$"/>
-		<property name="rewardSilver" value="76000.00$"/>
-		<property name="rewardGold" value="100000.25$"/>
+		<property name="rewardBronze" value="5000.00 EUR"/>
+		<property name="rewardSilver" value="76000.00 EUR"/>
+		<property name="rewardGold" value="100000.25 EUR"/>
 	</bean>
 	
   <!-- CommercialBanner beans -->

@@ -1,7 +1,12 @@
 
 package acme.features.provider.requests;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,12 +46,6 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.setCreationMoment(moment);
 
-		Money money;
-		money = new Money();
-		money.setAmount(0.0);
-		money.setCurrency("EUR");
-		entity.setReward(money);
-
 		request.bind(entity, errors, "creationMoment");
 
 	}
@@ -74,6 +73,19 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 
 		result = new Request();
 
+		//Money
+		Money money;
+		money = new Money();
+		money.setAmount(0.0);
+		money.setCurrency("EUR");
+		result.setReward(money);
+
+		//Deadline
+		LocalDateTime now = LocalDateTime.now();
+		LocalDateTime nowplus7 = now.plus(7, ChronoUnit.DAYS);
+		Date date = Timestamp.valueOf(nowplus7);
+		result.setDeadLine(date);
+
 		return result;
 	}
 
@@ -85,12 +97,17 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 
 		//Validaciones
 
-		boolean isAccepted, isDuplicated, isEuroZone;
+		boolean isAccepted, isDuplicated, isEuroZone, isOneWeekLater, isPatternOk;
 
-		String currency;
-		String eur = "EUR";
+		//Moneda EUR
+		if (!request.getModel().getAttribute("reward").toString().isEmpty()) {
 
-		currency = entity.getReward().getCurrency();
+			String currency;
+			String eur = "EUR";
+			currency = entity.getReward().getCurrency();
+			isEuroZone = currency.equals(eur);
+			errors.state(request, isEuroZone, "reward", "provider.request.error.money-no-euro");
+		}
 
 		//Checkbox
 		isAccepted = request.getModel().getBoolean("accept");
@@ -100,9 +117,21 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		isDuplicated = this.repository.findOneRequestByTicker(entity.getTicker()) != null;
 		errors.state(request, !isDuplicated, "ticker", "provider.request.error.duplicated");
 
-		//Moneda EUR
-		isEuroZone = currency.equals(eur);
-		errors.state(request, isEuroZone, "reward", "provider.request.error.money-no-euro");
+		//Ticker pattern internacional
+		Pattern p = Pattern.compile("R\\p{Lu}{4}-\\d{5}");
+		Matcher m = p.matcher(entity.getTicker());
+		isPatternOk = m.matches();
+		errors.state(request, isPatternOk, "ticker", "provider.request.error.ticker");
+
+		//Deadline una semana
+		if (!request.getModel().getAttribute("deadLine").equals("")) {
+
+			LocalDateTime now = LocalDateTime.now();
+			LocalDateTime nowplus7 = now.plus(7, ChronoUnit.DAYS);
+			Date date = Timestamp.valueOf(nowplus7);
+			isOneWeekLater = entity.getDeadLine().after(date);
+			errors.state(request, isOneWeekLater, "deadLine", "consumer.offer.error.deadline");
+		}
 
 	}
 
