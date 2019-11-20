@@ -19,6 +19,7 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.announcements" action="/anonymous/announcement/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.investorrecord" action="/anonymous/investor/list"/>
@@ -37,7 +38,6 @@
 			<acme:menu-suboption code="master.menu.authenticated.investorrecords" action="/authenticated/investor/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.offer" action="/authenticated/offer/list"/>     
-        	<acme:menu-separator/>
       		<acme:menu-suboption code="master.menu.authenticated.request" action="/authenticated/request/list"/>     		      		
 		</acme:menu-option>
 		
@@ -55,7 +55,6 @@
 			<acme:menu-suboption code="master.menu.administrator.investor.create" action="/administrator/investor/create"/>
 	   		<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.companyrecords.list" action="/administrator/company-record/list"/>
-			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.companyrecords.create" action="/administrator/company-record/create"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.banners.commercial-banner" action="/administrator/commercial-banner/list"/>	
