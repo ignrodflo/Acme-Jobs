@@ -1,6 +1,9 @@
 
 package acme.features.administrator.challenges;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +40,10 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		assert entity != null;
 		assert errors != null;
 
+		Date moment;
+		moment = new Date(System.currentTimeMillis() - 1);
+		entity.setMoment(moment);
+
 		request.bind(entity, errors, "moment");
 
 	}
@@ -57,6 +64,27 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 
 		result = new Challenge();
 
+		Money moneyB, moneyS, moneyG;
+		moneyB = new Money();
+		moneyB.setAmount(0.0);
+		moneyB.setCurrency("EUR");
+		result.setRewardBronze(moneyB);
+
+		moneyS = new Money();
+		moneyS.setAmount(0.0);
+		moneyS.setCurrency("EUR");
+		result.setRewardSilver(moneyS);
+
+		moneyG = new Money();
+		moneyG.setAmount(0.0);
+		moneyG.setCurrency("EUR");
+		result.setRewardGold(moneyG);
+
+		LocalDateTime now = LocalDateTime.now();
+		LocalDateTime nowplus7 = now.plus(8, ChronoUnit.DAYS);
+		Date date = Timestamp.valueOf(nowplus7);
+		result.setDeadline(date);
+
 		return result;
 	}
 
@@ -66,17 +94,21 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		assert entity != null;
 		assert errors != null;
 
-		boolean isEuroZoneB, isEuroZoneS, isEuroZoneG, isRewardBValid, isRewardSValid, isRewardGValid;
-		Money moneyB, moneyS, moneyG;
-		String eur = "EUR";
+		boolean isEuroZoneB, isEuroZoneS, isEuroZoneG, isRewardBValid, isRewardSValid, isRewardGValid, isOneWeekLater, rbNotEmpty, rsNotEmpty, rgNotEmpty;
 
-		moneyB = entity.getRewardBronze();
+		rbNotEmpty = !request.getModel().getAttribute("rewardBronze").toString().isEmpty();
+		rsNotEmpty = !request.getModel().getAttribute("rewardSilver").toString().isEmpty();
+		rgNotEmpty = !request.getModel().getAttribute("rewardGold").toString().isEmpty();
 
-		moneyS = entity.getRewardSilver();
+		if (rbNotEmpty && rsNotEmpty && rgNotEmpty) {
+			Money moneyB, moneyS, moneyG;
+			String eur = "EUR";
 
-		moneyG = entity.getRewardGold();
+			moneyB = entity.getRewardBronze();
 
-		if (moneyB != null && moneyS != null && moneyG != null) {
+			moneyS = entity.getRewardSilver();
+
+			moneyG = entity.getRewardGold();
 
 			isEuroZoneB = moneyB.getCurrency().contains(eur);
 			errors.state(request, isEuroZoneB, "rewardBronze", "administrator.challenge.error.money-no-euro");
@@ -95,7 +127,17 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 
 			isRewardGValid = moneyB.getAmount() < moneyG.getAmount() && moneyS.getAmount() < moneyG.getAmount();
 			errors.state(request, isRewardGValid, "rewardGold", "administrator.challenge.error.rewardNoValidG");
+
 		}
+		if (!request.getModel().getAttribute("deadline").equals("")) {
+
+			LocalDateTime now = LocalDateTime.now();
+			LocalDateTime nowplus7 = now.plus(7, ChronoUnit.DAYS);
+			Date date = Timestamp.valueOf(nowplus7);
+			isOneWeekLater = entity.getDeadline().after(date);
+			errors.state(request, isOneWeekLater, "deadline", "administrator.challenge.error.deadline");
+		}
+
 	}
 
 	@Override

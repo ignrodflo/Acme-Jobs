@@ -1,6 +1,9 @@
 
 package acme.features.administrator.challenges;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,17 +71,22 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 		assert entity != null;
 		assert errors != null;
 
-		boolean isEuroZoneB, isEuroZoneS, isEuroZoneG, isRewardBValid, isRewardSValid, isRewardGValid;
-		Money moneyB, moneyS, moneyG;
-		String eur = "EUR";
+		boolean isEuroZoneB, isEuroZoneS, isEuroZoneG, isRewardBValid, isRewardSValid, isRewardGValid, isOneWeekLater;
 
-		moneyB = entity.getRewardBronze();
+		boolean rb, rs, rg;
+		rb = !request.getModel().getAttribute("rewardBronze").toString().isEmpty();
+		rs = !request.getModel().getAttribute("rewardSilver").toString().isEmpty();
+		rg = !request.getModel().getAttribute("rewardGold").toString().isEmpty();
 
-		moneyS = entity.getRewardSilver();
+		if (rb && rs && rg) {
+			Money moneyB, moneyS, moneyG;
+			String eur = "EUR";
 
-		moneyG = entity.getRewardGold();
+			moneyB = entity.getRewardBronze();
 
-		if (moneyB != null && moneyS != null && moneyG != null) {
+			moneyS = entity.getRewardSilver();
+
+			moneyG = entity.getRewardGold();
 
 			isEuroZoneB = moneyB.getCurrency().contains(eur);
 			errors.state(request, isEuroZoneB, "rewardBronze", "administrator.challenge.error.money-no-euro");
@@ -97,6 +105,15 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 
 			isRewardGValid = moneyB.getAmount() < moneyG.getAmount() && moneyS.getAmount() < moneyG.getAmount();
 			errors.state(request, isRewardGValid, "rewardGold", "administrator.challenge.error.rewardNoValidG");
+
+		}
+		if (!request.getModel().getAttribute("deadline").equals("")) {
+
+			LocalDateTime now = LocalDateTime.now();
+			LocalDateTime nowplus7 = now.plus(7, ChronoUnit.DAYS);
+			Date date = Timestamp.valueOf(nowplus7);
+			isOneWeekLater = entity.getDeadline().after(date);
+			errors.state(request, isOneWeekLater, "deadline", "administrator.challenge.error.deadline");
 		}
 	}
 

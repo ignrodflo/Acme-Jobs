@@ -22,3 +22,4 @@ administrator.challenge.error.money-no-euro = Debe ser en euros
 administrator.challenge.error.rewardNoValidB = La recompensa nivel bronce debe ser menor que la plata y que la oro
 administrator.challenge.error.rewardNoValidS = La recompensa nivel plata debe estar entre la bronce y la oro
 administrator.challenge.error.rewardNoValidG = La recompensa nivel oro debe ser mayor que la plata y que la bronce
+administrator.challenge.error.deadline = La fecha de expiración debe ser una semana más tarde desde este momento
