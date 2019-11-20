@@ -3,6 +3,8 @@ package acme.entities.companyRecords;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
@@ -50,6 +52,7 @@ public class CompanyRecord extends DomainEntity {
 
 	private boolean				incorporated;
 
-	@Pattern(regexp = "^[0-5]|\\s*$")
-	private String				rating;
+	@Min(0)
+	@Max(5)
+	private Integer				rating;
 }
