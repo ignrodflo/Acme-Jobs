@@ -36,6 +36,11 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 		assert entity != null;
 		assert errors != null;
 
+		Date moment;
+
+		moment = new Date(System.currentTimeMillis() - 1);
+		entity.setMoment(moment);
+
 		request.bind(entity, errors, "moment");
 
 	}
