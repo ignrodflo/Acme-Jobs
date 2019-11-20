@@ -24,7 +24,7 @@
 	<acme:form-textbox code="anonymous.company-record.form.label.phone" path="phone" />
 	<acme:form-textbox code="anonymous.company-record.form.label.email" path="email" />
 	<acme:form-checkbox code="anonymous.company-record.form.label.incorporated" path="incorporated" readonly="True"/>
-	<acme:form-integer code="anonymous.company-record.form.label.rating" path="rating" />
+	<acme:form-integer code="anonymous.company-record.form.label.rating" path="rating" placeholder=" "/>
 	
   	<acme:form-return code="anonymous.company-record.button.return"/>
 </acme:form>

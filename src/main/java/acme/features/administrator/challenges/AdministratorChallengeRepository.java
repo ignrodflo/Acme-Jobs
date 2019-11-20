@@ -12,6 +12,7 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AdministratorChallengeRepository extends AbstractRepository {
 
+	@Query("Select c from Challenge c where c.id = ?1")
 	Challenge findOneById(int id);
 
 	@Query("Select c from Challenge c")

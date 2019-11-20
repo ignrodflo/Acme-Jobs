@@ -49,9 +49,9 @@
 		<property name="goalBronze" value="Do a little"/>
 		<property name="goalSilver" value="Do something else"/>
 		<property name="goalGold" value="Do everything"/>
-		<property name="rewardBronze" value="5000.00$"/>
-		<property name="rewardSilver" value="76000.00$"/>
-		<property name="rewardGold" value="100000.25$"/>
+		<property name="rewardBronze" value="5000.00 EUR"/>
+		<property name="rewardSilver" value="76000.00 EUR"/>
+		<property name="rewardGold" value="100000.25 EUR"/>
 	</bean>
 	
   <!-- CommercialBanner beans -->
@@ -60,7 +60,10 @@
 		<property name="picture" value="http://www.picture.com"/>
 		<property name="slogan" value="http://www.slogan.com"/>
 		<property name="targetURL" value="http://www.targetURL.com"/>
-		<property name="creditCard" value="123 456 789 0"/>
+		<property name="accountHolder" value="Alfredo Diaz Perez"/>
+		<property name="creditCardNumber" value="5390700823285988"/>
+		<property name="expirationDate" value="12/20"/> 
+		<property name="cvv" value="123"/>
 	</bean>
 	
   <!-- NonCommercialBanner beans -->
@@ -119,7 +122,7 @@
 		<property name="phone" value="+34 (9) 657036241"/>
 		<property name="email" value="pedcobram@alum.us.es"/>
 		<property name="incorporated" value="False"/>
-		<property name="rating" value="3"/>
+		<property name="rating"><null/></property>
 	</bean>
 	
 	<bean id="record02" class="acme.entities.companyRecords.CompanyRecord">

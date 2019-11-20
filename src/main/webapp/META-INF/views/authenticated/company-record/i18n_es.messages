@@ -28,3 +28,7 @@ authenticated.company-record.list.label.companyName: Nombre de la Compañía
 authenticated.company-record.list.label.sector = Sector
 authenticated.company-record.list.label.activDescription = Descripcion de la Actividad
 authenticated.company-record.list.label.rating = Rating
+
+# company-record.form.error ###################################
+
+company-record.form.error.phone = El patrón del teléfono es incorrecto. Z puede tener como máximo 10 dígitos. Los paréntesis son opcionales

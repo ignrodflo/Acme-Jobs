@@ -46,11 +46,6 @@ master.menu.authenticated.companyrecords = Company Records
 master.menu.authenticated.investorrecords = Investor Records
 master.menu.authenticated.request = Request
 
-# master.menu.anonymous.investor ###############################################
-
-master.menu.anonymous.investor = Investor
-master.menu.anonymous.investorrecords = Investor Records
-
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
@@ -61,15 +56,14 @@ master.menu.administrator.announcements.create = Create announcement
 master.menu.administrator.challenges = Challenges
 master.menu.administrator.challenges.create = Create challenge
 master.menu.administrator.investor = Investor Records
-master.menu.administrator.investor.create = Add inversor
+master.menu.administrator.investor.create = Create investor record
 master.menu.administrator.sysconfig = System Configuration
 master.menu.administrator.companyrecords.list = Company Records
 master.menu.administrator.companyrecords.create = Create Company Record
 
-master.menu.administrator.banners = Banners
-master.menu.administrator.banners.commercial-banner = Commercial
+master.menu.administrator.banners.commercial-banner = Commercial Banners
 master.menu.administrator.banners.commercial-banner.create = Create Commercial Banner
-master.menu.administrator.banners.non-commercial-banner = Non Commercial 
+master.menu.administrator.banners.non-commercial-banner = Non Commercial Banners
 master.menu.administrator.banners.non-commercial-banner.create = Create Non Commercial Banner
 
 

@@ -32,7 +32,7 @@ public class Offer extends DomainEntity {
 	@NotBlank
 	private String				title;
 
-	//@NotNull
+	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	private Date				moment;
@@ -53,7 +53,7 @@ public class Offer extends DomainEntity {
 
 	//Ticker
 
-	@Pattern(regexp = "O\\p{Lu}{4}-\\d{5}", message = "Ticker doesn't follow the pattern, OXXXX-99999, where “O” is letter “O”, “X” denotes an arbitrary letter and “9” denotes an arbitrary digit ")
+	@Pattern(regexp = "O\\p{Lu}{4}-\\d{5}", message = "OXXXX-99999")
 	@Column(unique = true)
 	@NotNull
 	private String				ticker;

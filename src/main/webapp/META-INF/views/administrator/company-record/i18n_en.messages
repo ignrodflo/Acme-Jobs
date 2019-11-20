@@ -31,3 +31,7 @@ administrator.company-record.list.label.companyName: Company Name
 administrator.company-record.list.label.sector = Sector
 administrator.company-record.list.label.activDescription = Activity Description
 administrator.company-record.list.label.rating = Rating
+
+# company-record.form.error ###################################
+
+company-record.form.error.phone = Phone pattern doesnt match. Z can be up to 10 digits. Brackets are optional

@@ -22,4 +22,3 @@
 </acme:list>
 
 
-<acme:menu-option code="administrator.commercial-banner.form.button.create" action="/administrator/commercial-banner/create"/>

@@ -33,9 +33,9 @@ public class Request extends DomainEntity {
 	 */
 	private static final long	serialVersionUID	= 1L;
 
-	@NotBlank
+	@NotNull
 	@Column(unique = true)
-	@Pattern(regexp = "^(R\\p{Upper}{4}-[0-9]{5})$", message = "Ticker doesn't follow the pattern, RXXXX-99999, where “R” is letter “R”, “X” denotes an arbitrary letter and “9” denotes an arbitrary digit ")
+	@Pattern(regexp = "R\\p{Lu}{4}-\\d{5}", message = "RXXXX-99999")
 	private String				ticker;
 
 	@NotBlank

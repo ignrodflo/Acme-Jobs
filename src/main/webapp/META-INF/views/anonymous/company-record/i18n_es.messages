@@ -28,3 +28,7 @@ anonymous.company-record.list.label.companyName: Nombre de la Compañía
 anonymous.company-record.list.label.sector = Sector
 anonymous.company-record.list.label.activDescription = Descripcion de la Actividad
 anonymous.company-record.list.label.rating = Rating
+
+# company-record.form.error ###################################
+
+company-record.form.error.phone = El patrón del teléfono es incorrecto. Z puede tener como máximo 10 dígitos. Los paréntesis son opcionales

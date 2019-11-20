@@ -1,7 +1,12 @@
 
 package acme.features.consumer.offer;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,6 +41,10 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert errors != null;
 
+		Date moment;
+		moment = new Date(System.currentTimeMillis() - 1);
+		entity.setMoment(moment);
+
 		request.bind(entity, errors, "moment");
 
 	}
@@ -59,6 +68,20 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 	public Offer instantiate(final Request<Offer> request) {
 		Offer result;
 		result = new Offer();
+
+		//Money
+		Money money;
+		money = new Money();
+		money.setAmount(0.0);
+		money.setCurrency("EUR");
+		result.setMoney(money);
+
+		//Deadline
+		LocalDateTime now = LocalDateTime.now();
+		LocalDateTime nowplus7 = now.plus(8, ChronoUnit.DAYS);
+		Date date = Timestamp.valueOf(nowplus7);
+		result.setDeadLine(date);
+
 		return result;
 	}
 
@@ -70,13 +93,17 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 
 		//Validaciones
 
-		boolean isAccepted, isDuplicated, isEuroZone;
+		boolean isAccepted, isDuplicated, isEuroZone, isOneWeekLater, isPatternOk;
 
-		Money money;
-		String eur = "EUR";
+		//Moneda EUR
+		if (!request.getModel().getAttribute("money").toString().isEmpty()) {
 
-		money = entity.getMoney();
-		String money2 = money.toString();
+			String currency;
+			String eur = "EUR";
+			currency = entity.getMoney().getCurrency();
+			isEuroZone = currency.equals(eur);
+			errors.state(request, isEuroZone, "money", "consumer.offer.error.money-no-euro");
+		}
 
 		//Checkbox
 		isAccepted = request.getModel().getBoolean("accept");
@@ -86,9 +113,21 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		isDuplicated = this.repository.findOneOfferByTicker(entity.getTicker()) != null;
 		errors.state(request, !isDuplicated, "ticker", "consumer.offer.error.duplicated");
 
-		//Moneda EUR
-		isEuroZone = money2.contains(eur);
-		errors.state(request, isEuroZone, "money", "consumer.offer.error.money-no-euro");
+		//Ticker pattern internacional
+		Pattern p = Pattern.compile("O\\p{Lu}{4}-\\d{5}");
+		Matcher m = p.matcher(entity.getTicker());
+		isPatternOk = m.matches();
+		errors.state(request, isPatternOk, "ticker", "consumer.offer.error.ticker");
+
+		//Deadline una semana
+		if (!request.getModel().getAttribute("deadLine").equals("")) {
+
+			LocalDateTime now = LocalDateTime.now();
+			LocalDateTime nowplus7 = now.plus(7, ChronoUnit.DAYS);
+			Date date = Timestamp.valueOf(nowplus7);
+			isOneWeekLater = entity.getDeadLine().after(date);
+			errors.state(request, isOneWeekLater, "deadLine", "consumer.offer.error.deadline");
+		}
 
 	}
 

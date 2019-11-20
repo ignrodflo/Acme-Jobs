@@ -9,6 +9,8 @@ provider.request.form.label.accept = I confirm the creation
 provider.request.error.must-accept = Must accept the creation
 provider.request.error.duplicated = This ticker is already taken
 provider.request.error.money-no-euro = It must be in Euro
+provider.request.error.deadline = The Deadline must be one week later from now
+provider.request.error.ticker = Ticker doesn't follow the pattern, “R” is letter “R”, “X” denotes an arbitrary letter and “9” denotes an arbitrary digit
 
 provider.request.form.button.create = Create
 provider.request.form.button.return = Return
