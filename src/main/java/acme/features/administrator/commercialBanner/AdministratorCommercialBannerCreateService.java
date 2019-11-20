@@ -1,6 +1,10 @@
 
 package acme.features.administrator.commercialBanner;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -43,7 +47,7 @@ public class AdministratorCommercialBannerCreateService implements AbstractCreat
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "picture", "slogan", "targetURL", "accountHolder", "creditCardNumber", "expirationMonth", "expirationYear", "cvv");
+		request.unbind(entity, model, "picture", "slogan", "targetURL", "accountHolder", "creditCardNumber", "expirationDate", "cvv");
 	}
 
 	@Override
@@ -61,6 +65,18 @@ public class AdministratorCommercialBannerCreateService implements AbstractCreat
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		if (!errors.hasErrors()) {
+			String[] exdate = entity.getExpirationDate().split("/");
+			try {
+				Date date = new SimpleDateFormat("dd/MM/yy").parse("01/" + exdate[0] + "/" + exdate[1]);
+				Date today = new Date();
+				errors.state(request, date.after(today), "expirationDate", "administrator.comercial-banner.error.creditCard");
+
+			} catch (ParseException e) {
+				errors.state(request, false, "expirationDate", "administrator.comercial-banner.error.creditCard");
+			}
+		}
 	}
 
 	@Override

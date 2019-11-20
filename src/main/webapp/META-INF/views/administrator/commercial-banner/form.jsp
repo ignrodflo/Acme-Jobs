@@ -9,10 +9,10 @@
 	<acme:form-url code="administrator.commercial-banner.form.label.targetURL" path="targetURL"/>
 	<acme:form-textbox code="administrator.commercial-banner.form.label.accountHolder" path="accountHolder"/>
 	<acme:form-textbox code="administrator.commercial-banner.form.label.creditCardNumber" path="creditCardNumber"/>
-	<!-- <acme:form-moment code="administrator.commercial-banner.form.label.expirationDate" path="expirationDate" placeholder="mm/yyyy"/> -->
-	<acme:form-integer code="administrator.commercial-banner.form.label.expirationMonth" path="expirationMonth" placeholder="DD"/>
-	<acme:form-integer code="administrator.commercial-banner.form.label.expirationYear" path="expirationYear" placeholder="YYYY"/>
-	<acme:form-textbox code="administrator.commercial-banner.form.label.cvv" path="cvv"/>
+	<acme:form-textbox code="administrator.commercial-banner.form.label.expirationDate" path="expirationDate" placeholder="mm/yy" /> 
+	<!--<acme:form-integer code="administrator.commercial-banner.form.label.expirationMonth" path="expirationMonth" placeholder="DD"/>-->
+	<!--<acme:form-integer code="administrator.commercial-banner.form.label.expirationYear" path="expirationYear" placeholder="YYYY"/>-->
+	<acme:form-textbox code="administrator.commercial-banner.form.label.cvv" path="cvv" placeholder="XXX"/>
 	
 	<acme:form-submit test="${command == 'show'}"
 		code="administrator.commercial-banner.form.button.update"
