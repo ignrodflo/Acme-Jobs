@@ -58,8 +58,7 @@
         `account_holder` varchar(255),
         `credit_card_number` varchar(255),
         `cvv` varchar(255),
-        `expiration_month` integer,
-        `expiration_year` varchar(255),
+        `expiration_date` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -72,7 +71,7 @@
         `email` varchar(255),
         `incorporated` bit not null,
         `phone` varchar(255),
-        `rating` varchar(255),
+        `rating` integer,
         `sector` varchar(255),
         `website` varchar(255),
         primary key (`id`)
